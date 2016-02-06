@@ -1,0 +1,17 @@
+{
+  "name": "soundcloudql",
+  "version": "1.0.0",
+  "description": "GraphQL SoundCloud api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-graphql": "^0.4.9",
+    "graphql": "^0.4.16"
+  }
+}
