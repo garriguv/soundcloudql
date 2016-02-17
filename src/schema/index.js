@@ -27,6 +27,38 @@ var trackType = new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString),
       description: 'The title of the track.',
       resolve: (track) => track.title
+    },
+    permalinkUrl: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: 'The permalink URL of the track.',
+      resolve: (track) => track.permalink_url
+    },
+    streamUrl: {
+      type: GraphQLString,
+      description: 'The stream URL of the track.',
+      resolve: (track) => track.stream_url
+    },
+    waveformUrl: {
+      type: GraphQLString,
+      description: 'The waveform URL of the track.',
+      resolve: (track) => track.waveform_url
+    },
+    artworkUrl: {
+      type: GraphQLString,
+      description: 'The artwork URL of the track.',
+      resolve: (track) => track.artwork_url
+    },
+    duration: {
+      type: GraphQLInt,
+      description: 'The duration of the track in milliseconds.',
+      resolve: (track) => track.duration
+    },
+    userConnection: {
+      type: userType,
+      description: 'The user who posted the track.',
+      resolve: (root) => {
+        return JSONDataWithPath('/users/' + root.user_id);
+      }
     }
   })
 });
@@ -47,8 +79,33 @@ var userType = new GraphQLObjectType({
     },
     permalinkUrl: {
       type: new GraphQLNonNull(GraphQLString),
-      description: 'The permalink of the user.',
+      description: 'The permalink URL of the user.',
       resolve: (user) => user.permalink_url
+    },
+    avatarUrl: {
+      type: GraphQLString,
+      description: 'The avatar URL of the user.',
+      resolve: (user) => user.avatar_url
+    },
+    country: {
+      type: GraphQLString,
+      description: 'The country of the user.',
+      resolve: (user) => user.country
+    },
+    description: {
+      type: GraphQLString,
+      description: 'The description of the user.',
+      resolve: (user) => user.description
+    },
+    playlistCount: {
+      type: GraphQLInt,
+      description: 'The public playlist count of the user.',
+      resolve: (user) => user.playlist_count
+    },
+    trackCount: {
+      type: GraphQLInt,
+      description: 'The public track count of the user.',
+      resolve: (user) => user.track_count
     },
     tracksConnection: {
       type: new GraphQLList(trackType),
