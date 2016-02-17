@@ -2,12 +2,16 @@
 
 import express from 'express';
 
+import http from 'http';
+
 import {
   GraphQLID,
   GraphQLString,
   GraphQLObjectType,
   GraphQLSchema
 } from 'graphql';
+
+import YAML from 'yamljs';
 
 var graphqlHTTP = require('express-graphql');
 
@@ -30,6 +34,29 @@ var trackType = new GraphQLObjectType({
   })
 });
 
+var environment = YAML.load('.env.yml');
+
+function getData(path) {
+  var promise = new Promise(
+    function (resolve) {
+      http.get({
+        host: 'api.soundcloud.com',
+        path: path + '?client_id=' + environment['client_id']
+      }, function (response) {
+        console.log(this.path);
+        var body = '';
+        response.on('data', function (d) {
+          body += d;
+        });
+        response.on('end', function () {
+          resolve(JSON.parse(body));
+        });
+      });
+    }
+  );
+  return promise;
+}
+
 var rootType = new GraphQLObjectType({
   name: 'Root',
   fields: () => ({
@@ -41,9 +68,10 @@ var rootType = new GraphQLObjectType({
       description: 'Find track by id',
       resolve: (_, args) => {
         if (args.id !== undefined && args.id !== null) {
-          return { id: args.id, title: 'Title ' + args.id };
+          return getData('/tracks/' + args.id);
+        } else {
+          throw new Error('must provide id');
         }
-        throw new Error('must provide id');
       }
     }
   })
