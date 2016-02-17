@@ -2,9 +2,12 @@
 
 import {
   GraphQLID,
+  GraphQLInt,
   GraphQLString,
+  GraphQLNonNull,
   GraphQLObjectType,
-  GraphQLSchema
+  GraphQLSchema,
+  GraphQLList
 } from 'graphql';
 
 import {
@@ -16,12 +19,12 @@ var trackType = new GraphQLObjectType({
   description: 'A track on SoundCloud.',
   fields: () => ({
     id: {
-      type: GraphQLID,
+      type: new GraphQLNonNull(GraphQLID),
       description: 'The identifier of the track.',
       resolve: (track) => track.id
     },
     title: {
-      type: GraphQLString,
+      type: new GraphQLNonNull(GraphQLString),
       description: 'The title of the track.',
       resolve: (track) => track.title
     }
@@ -33,19 +36,31 @@ var userType = new GraphQLObjectType({
   description: 'A user on SoundCloud.',
   fields: () => ({
     id: {
-      type: GraphQLID,
+      type: new GraphQLNonNull(GraphQLID),
       description: 'The identifier of the user.',
       resolve: (user) => user.id
     },
     username: {
-      type: GraphQLString,
+      type: new GraphQLNonNull(GraphQLString),
       description: 'The name of the user.',
       resolve: (user) => user.username
     },
     permalinkUrl: {
-      type: GraphQLString,
+      type: new GraphQLNonNull(GraphQLString),
       description: 'The permalink of the user.',
       resolve: (user) => user.permalink_url
+    },
+    tracksConnection: {
+      type: new GraphQLList(trackType),
+      args: {
+        limit: { type: GraphQLInt }
+      },
+      description: 'The public tracks of the user.',
+      resolve: (root, args) => {
+        return JSONDataWithPath(
+          '/users/' + root.id +
+          '/tracks?limit=' + args.limit);
+      }
     }
   })
 });
@@ -56,7 +71,7 @@ var rootType = new GraphQLObjectType({
     track: {
       type: trackType,
       args: {
-        id: { type: GraphQLID }
+        id: { type: new GraphQLNonNull(GraphQLID) }
       },
       description: 'Find track by id',
       resolve: (_, args) => {
@@ -70,7 +85,7 @@ var rootType = new GraphQLObjectType({
     user: {
       type: userType,
       args: {
-        id: { type: GraphQLID }
+        id: { type: new GraphQLNonNull(GraphQLID) }
       },
       description: 'Find user by id',
       resolve: (_, args) => {
