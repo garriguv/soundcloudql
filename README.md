@@ -13,6 +13,8 @@ Get a [SoundCloud api client id](http://soundcloud.com/you/apps), and set it in 
     cp .env.yml.sample .env.yml
     vi .env.yml
 
-Run it!
+Run it
 
     npm start
+
+You'll find GraphiQL at http://localhost:3000/graphql
