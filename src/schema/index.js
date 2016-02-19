@@ -122,6 +122,43 @@ var userType = new GraphQLObjectType({
   })
 });
 
+var playlistType = new GraphQLObjectType({
+  name: 'Playlist',
+  description: 'A playlist on SoundCloud.',
+  fields: () => ({
+    id: {
+      type: new GraphQLNonNull(GraphQLID),
+      description: 'The identifier of the playlist.',
+      resolve: (playlist) => playlist.id
+    },
+    title: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: 'The title of the playlist.',
+      resolve: (playlist) => playlist.title
+    },
+    permalinkUrl: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: 'The permalink URL of the playlist.',
+      resolve: (playlist) => playlist.permalink_url
+    },
+    description: {
+      type: GraphQLString,
+      description: 'The description of the playlist.',
+      resolve: (playlist) => playlist.description
+    },
+    artworkUrl: {
+      type: GraphQLString,
+      description: 'The artwork URL of the playlist.',
+      resolve: (playlist) => playlist.artwork_url
+    },
+    duration: {
+      type: GraphQLInt,
+      description: 'The duration of the playlist in milliseconds.',
+      resolve: (playlist) => playlist.duration
+    }
+  })
+});
+
 var rootType = new GraphQLObjectType({
   name: 'Root',
   fields: () => ({
@@ -148,6 +185,20 @@ var rootType = new GraphQLObjectType({
       resolve: (_, args) => {
         if (args.id !== undefined && args.id !== null) {
           return JSONDataWithPath('/users/' + args.id);
+        } else {
+          throw new Error('must provide id');
+        }
+      }
+    },
+    playlist: {
+      type: playlistType,
+      args: {
+        id: { type: new GraphQLNonNull(GraphQLID) }
+      },
+      description: 'Find playlist by id',
+      resolve: (_, args) => {
+        if (args.id !== undefined && args.id !== null) {
+          return JSONDataWithPath('/playlists/' + args.id);
         } else {
           throw new Error('must provide id');
         }
