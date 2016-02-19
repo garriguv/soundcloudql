@@ -155,6 +155,20 @@ var playlistType = new GraphQLObjectType({
       type: GraphQLInt,
       description: 'The duration of the playlist in milliseconds.',
       resolve: (playlist) => playlist.duration
+    },
+    userConnection: {
+      type: userType,
+      description: 'The user who posted the playlist.',
+      resolve: (root) => {
+        return JSONDataWithPath('/users/' + root.user_id);
+      }
+    },
+    tracksConnection: {
+      type: new GraphQLList(trackType),
+      description: 'The tracks in the playlist.',
+      resolve: (root) => {
+        return root.tracks;
+      }
     }
   })
 });
