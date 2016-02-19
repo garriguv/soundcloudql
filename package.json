@@ -16,7 +16,8 @@
     "express": "^4.13.4",
     "express-graphql": "^0.4.9",
     "graphql": "^0.4.16",
-    "unirest": "^0.4.2"
+    "unirest": "^0.4.2",
+    "yamljs": "^0.2.5"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
