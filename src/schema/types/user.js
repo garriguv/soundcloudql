@@ -42,6 +42,11 @@ var UserType = new GraphQLObjectType({
       description: 'The country of the user.',
       resolve: (user) => user.country
     },
+    city: {
+      type: GraphQLString,
+      description: 'The city of the user.',
+      resolve: (user) => user.city
+    },
     description: {
       type: GraphQLString,
       description: 'The description of the user.',
