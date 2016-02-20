@@ -14,6 +14,7 @@ import {
 import TrackType from './types/track';
 import UserType from './types/user';
 import PlaylistType from './types/playlist';
+import CommentType from './types/comment';
 
 var rootType = new GraphQLObjectType({
   name: 'Root',
@@ -55,6 +56,20 @@ var rootType = new GraphQLObjectType({
       resolve: (_, args) => {
         if (args.id !== undefined && args.id !== null) {
           return JSONDataWithPath('/playlists/' + args.id);
+        } else {
+          throw new Error('must provide id');
+        }
+      }
+    },
+    comment: {
+      type: CommentType,
+      args: {
+        id: { type: new GraphQLNonNull(GraphQLID) }
+      },
+      description: 'Find comment by id',
+      resolve: (_, args) => {
+        if (args.id !== undefined && args.id !== null) {
+          return JSONDataWithPath('/comments/' + args.id);
         } else {
           throw new Error('must provide id');
         }

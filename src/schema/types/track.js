@@ -5,7 +5,8 @@ import {
   GraphQLInt,
   GraphQLString,
   GraphQLNonNull,
-  GraphQLObjectType
+  GraphQLObjectType,
+  GraphQLList
 } from 'graphql';
 
 import {
@@ -13,6 +14,7 @@ import {
 } from '../../api';
 
 import UserType from './user';
+import CommentType from './comment';
 
 var TrackType = new GraphQLObjectType({
   name: 'Track',
@@ -58,6 +60,18 @@ var TrackType = new GraphQLObjectType({
       description: 'The user who posted the track.',
       resolve: (root) => {
         return JSONDataWithPath('/users/' + root.user_id);
+      }
+    },
+    commentsConnection: {
+      type: new GraphQLList(CommentType),
+      description: 'The comments on the track.',
+      args: {
+        limit: { type: GraphQLInt }
+      },
+      resolve: (root, args) => {
+        return JSONDataWithPath(
+          '/tracks/' + root.id +
+          '/comments?limit=' + args.limit);
       }
     }
   })
