@@ -45,6 +45,7 @@ export function cacheJSONDataWithPath(path) {
       if (cache[cleanPath]) {
         return cache[cleanPath];
       }
+      console.error('No cache for "' + cleanPath + '". Fetching remotely...');
       return fetchRemoteJSONThenCacheIt(path, cleanPath, cache);
     }).catch(console.log.bind(console));
 }
