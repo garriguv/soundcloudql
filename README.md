@@ -1,4 +1,4 @@
-# SoundCloudQL
+# SoundCloudQL [![Build Status](https://travis-ci.org/garriguv/soundcloudql.svg?branch=master)](https://travis-ci.org/garriguv/soundcloudql)
 
 GraphQL wrapper around the soundcloud api.
 
