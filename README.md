@@ -17,4 +17,4 @@ Run it
 
     npm start
 
-You'll find GraphiQL at http://localhost:3000/graphql
+You'll find GraphiQL at [http://localhost:3000/graphql](http://localhost:3000/graphql)
