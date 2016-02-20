@@ -1,5 +1,3 @@
-/* @flow */
-
 import { apiJSONDataWithPath } from './remote';
 import { cacheJSONDataWithPath } from './cache';
 

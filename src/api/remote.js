@@ -1,5 +1,3 @@
-/* @flow */
-
 import http from 'http';
 import YAML from 'yamljs';
 
