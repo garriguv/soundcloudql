@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "GraphQL SoundCloud api",
   "main": "index.js",
+  "repository": "https://github.com/garriguv/soundcloudql",
   "scripts": {
     "test": "npm run lint && npm run check",
     "lint": "eslint src",
@@ -24,7 +25,9 @@
     "babel-core": "^6.4.5",
     "babel-eslint": "^4.1.8",
     "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.5.0",
     "eslint": "^1.10.3",
-    "flow-bin": "^0.21.0"
+    "flow-bin": "^0.21.0",
+    "mocha": "^2.4.5"
   }
 }
