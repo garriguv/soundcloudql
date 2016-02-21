@@ -9,8 +9,10 @@ var cachePath = 'src/api/cache.json';
 
 function JSONCache() {
   return new Promise( function (resolve, reject) {
+    console.error('JSONCache cachePath: ' + cachePath);
     readFile(cachePath, 'utf8', function (err, data) {
       if (err) {
+        console.error('JSONCache error: ' + err);
         reject(err);
       }
       resolve(JSON.parse(data));
@@ -43,6 +45,7 @@ export function cacheJSONDataWithPath(path) {
   return JSONCache()
     .then(function (cache) {
       if (cache[cleanPath]) {
+        console.error('Cache hit for "' + cleanPath + '"');
         return cache[cleanPath];
       }
       console.error('No cache for "' + cleanPath + '". Fetching remotely...');
