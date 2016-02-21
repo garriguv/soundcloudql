@@ -12,6 +12,7 @@ import {
 } from '../../api';
 
 import TrackType from './track';
+import CommentType from './comment';
 
 var UserType = new GraphQLObjectType({
   name: 'User',
@@ -72,6 +73,18 @@ var UserType = new GraphQLObjectType({
         return JSONDataWithPath(
           '/users/' + root.id +
           '/tracks?limit=' + args.limit);
+      }
+    },
+    commentsConnection: {
+      type: new GraphQLList(CommentType),
+      description: 'The comments by this user.',
+      args: {
+        limit: { type: GraphQLInt }
+      },
+      resolve: (root, args) => {
+        return JSONDataWithPath(
+          '/users/' + root.id +
+          '/comments?limit=' + args.limit);
       }
     }
   })
