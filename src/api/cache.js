@@ -7,7 +7,7 @@ import {
 
 var cachePath = 'src/api/cache.json';
 
-function cachedJSON() {
+function JSONCache() {
   return new Promise( function (resolve, reject) {
     readFile(cachePath, 'utf8', function (err, data) {
       if (err) {
@@ -18,7 +18,7 @@ function cachedJSON() {
   });
 }
 
-function storeCache(cache) {
+function replaceStoredCache(cache) {
   return new Promise( function (resolve, reject) {
     writeFile(cachePath, JSON.stringify(cache, null, '  '), function (err) {
       if (err) {
@@ -32,7 +32,7 @@ function storeCache(cache) {
 function fetchRemoteJSONThenCacheIt(path, cleanPath, cache) {
   return apiJSONDataWithPath(path).then(function (json) {
     cache[cleanPath] = json;
-    return storeCache(cache).then(function () {
+    return replaceStoredCache(cache).then(function () {
       return json;
     });
   });
@@ -40,7 +40,7 @@ function fetchRemoteJSONThenCacheIt(path, cleanPath, cache) {
 
 export function cacheJSONDataWithPath(path) {
   var cleanPath = path.replace('[?&]client_id=.*$', '');
-  return cachedJSON()
+  return JSONCache()
     .then(function (cache) {
       if (cache[cleanPath]) {
         return cache[cleanPath];
