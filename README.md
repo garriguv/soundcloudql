@@ -8,16 +8,16 @@ Install the dependencies
 
     npm install
 
-Get a [SoundCloud api client id](http://soundcloud.com/you/apps), and set it in `.env.yml`
+Get a [SoundCloud api client id](http://soundcloud.com/you/apps), and set it in `.env`
 
-    cp .env.yml.sample .env.yml
-    vi .env.yml
+    cp .env.sample .env
+    vi .env
 
-Run it
+Run it (with [node-foreman](https://github.com/strongloop/node-foreman))
 
-    npm start
+    nf start
 
-You'll find GraphiQL at [http://localhost:3000/graphql](http://localhost:3000/graphql)
+You'll find GraphiQL at [http://localhost:5000/graphql](http://localhost:5000/graphql)
 
 ### Testing
 

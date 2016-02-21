@@ -8,11 +8,9 @@
     "test": "npm run lint && npm run testonly",
     "testonly": "NODE_ENV=test mocha --compilers js:babel-register src/**/__tests__/*.js",
     "lint": "eslint src",
-    "start": "babel-node src/index.js",
-    "start-server": "npm run build && node ./build/index.js",
-    "build": "npm run clean && npm run build-server",
-    "clean": "rm -rf build && mkdir build",
-    "build-server": "babel -d ./build ./src"
+    "start": "npm run build && node ./build/index.js",
+    "build": "npm run clean && babel -d ./build ./src",
+    "clean": "rm -rf build && mkdir build"
   },
   "engines": {
     "node": "5.6.0"
@@ -28,9 +26,9 @@
     "babel-register": "^6.5.2",
     "express": "^4.13.4",
     "express-graphql": "^0.4.9",
+    "foreman": "^1.4.1",
     "graphql": "^0.4.16",
-    "unirest": "^0.4.2",
-    "yamljs": "^0.2.5"
+    "unirest": "^0.4.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
