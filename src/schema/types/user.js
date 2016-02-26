@@ -90,4 +90,5 @@ var UserType = new GraphQLObjectType({
   })
 });
 
+
 export default UserType;

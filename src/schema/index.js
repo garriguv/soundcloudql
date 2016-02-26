@@ -1,8 +1,10 @@
 import {
   GraphQLID,
+  GraphQLList,
   GraphQLNonNull,
   GraphQLObjectType,
-  GraphQLSchema
+  GraphQLSchema,
+  GraphQLString
 } from 'graphql';
 
 import {
@@ -44,6 +46,16 @@ var rootType = new GraphQLObjectType({
           throw new Error('must provide id');
         }
       }
+    },
+    users: {
+        type: new GraphQLList(UserType),
+        args: {
+          q: { type: new GraphQLNonNull(GraphQLString) }
+        },
+        description: 'Search for users',
+        resolve: (_, args) => {
+            return JSONDataWithPath('/users?q=' + args.q);
+        }
     },
     playlist: {
       type: PlaylistType,
