@@ -1,4 +1,5 @@
 import {
+  GraphQLEnumType,
   GraphQLID,
   GraphQLInt,
   GraphQLString,
@@ -13,6 +14,49 @@ import {
 
 import UserType from './user';
 import CommentType from './comment';
+
+var LicenseType = new GraphQLEnumType({
+  name: 'License',
+  description: 'License under which a track is published',
+  values: {
+    TO_SHARE: {
+      value: 'to_share',
+      description: 'to share'
+    },
+    TO_USE_COMMERCIALLY: {
+      value: 'to_use_commercially',
+      description: 'to use commercially'
+    },
+    TO_MODIFY_COMMERCIALLY: {
+      value: 'to_modify_commercially',
+      description: 'to modify commercially'
+    },
+    CC_BY: {
+      value: 'cc-by',
+      description: 'cc by'
+    },
+    CC_BY_NC: {
+      value: 'cc-by-nc',
+      description: 'cc by nc'
+    },
+    CC_BY_ND: {
+      value: 'cc-by-nd',
+      description: 'cc by nd'
+    },
+    CC_BY_SA: {
+      value: 'cc-by-sa',
+      description: 'cc by sa'
+    },
+    CC_BY_NC_ND: {
+      value: 'cc-by-nc-nd',
+      description: 'cc by nc nd'
+    },
+    CC_BY_NC_SA: {
+      value: 'cc-by-nc-sa',
+      description: 'cc by nc sa'
+    }
+  }
+});
 
 var TrackType = new GraphQLObjectType({
   name: 'Track',
@@ -75,4 +119,8 @@ var TrackType = new GraphQLObjectType({
   })
 });
 
-export default TrackType;
+export {
+  TrackType as default,
+  TrackType,
+  LicenseType
+};

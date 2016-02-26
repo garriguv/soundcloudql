@@ -13,7 +13,7 @@ import {
   JSONDataWithPath
 } from '../api';
 
-import TrackType from './types/track';
+import { LicenseType, TrackType } from './types/track';
 import UserType from './types/user';
 import PlaylistType from './types/playlist';
 import CommentType from './types/comment';
@@ -59,6 +59,7 @@ var rootType = new GraphQLObjectType({
             }
           })
         },
+        license: {type: LicenseType }
       },
       description: 'Search for tracks',
       resolve: (_, args) => {
@@ -76,6 +77,9 @@ var rootType = new GraphQLObjectType({
         if (args.duration) {
           path += "&duration[from]=" + args.duration.from;
           path += "&duration[to]=" + args.duration.to;
+        }
+        if (args.license) {
+          path += "&license=" + args.license;
         }
         return JSONDataWithPath(path);
       }
