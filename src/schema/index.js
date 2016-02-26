@@ -1,5 +1,7 @@
 import {
   GraphQLID,
+  GraphQLInt,
+  GraphQLInputObjectType,
   GraphQLList,
   GraphQLNonNull,
   GraphQLObjectType,
@@ -31,6 +33,51 @@ var rootType = new GraphQLObjectType({
         } else {
           throw new Error('must provide id');
         }
+      }
+    },
+    tracks: {
+      type: new GraphQLList(TrackType),
+      args: {
+        q: {type: new GraphQLNonNull(GraphQLString)},
+        tags: {type: new GraphQLList(GraphQLString)},
+        genres: {type: new GraphQLList(GraphQLString)},
+        bpm: {
+          type: new GraphQLInputObjectType({
+            name: 'BPM',
+            fields: {
+              from: {type: new GraphQLNonNull(GraphQLInt) },
+              to: { type: new GraphQLNonNull(GraphQLInt) }
+            }
+          })
+        },
+        duration: {
+          type: new GraphQLInputObjectType({
+            name: 'Duration',
+            fields: {
+              from: {type: new GraphQLNonNull(GraphQLInt) },
+              to: { type: new GraphQLNonNull(GraphQLInt) }
+            }
+          })
+        },
+      },
+      description: 'Search for tracks',
+      resolve: (_, args) => {
+        let path = '/tracks?q=' + encodeURIComponent(args.q);
+        if (args.tags) {
+          path += "&tags=" + encodeURIComponent(args.tags.join());
+        }
+        if (args.genres) {
+          path += "&genres=" + args.genres.join();
+        }
+        if (args.bpm) {
+          path += "&bpm[from]=" + args.bpm.from;
+          path += "&bpm[to]=" + args.bpm.to;
+        }
+        if (args.duration) {
+          path += "&duration[from]=" + args.duration.from;
+          path += "&duration[to]=" + args.duration.to;
+        }
+        return JSONDataWithPath(path);
       }
     },
     user: {
