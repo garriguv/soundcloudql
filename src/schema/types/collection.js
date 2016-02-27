@@ -10,10 +10,10 @@ import {
 } from '../../api';
 
 export function collectionType(
-  type, typeName, description, pathArgs, constructPath) {
+  name, type, description, pathArgs, constructPath) {
   return {
     type: new GraphQLObjectType({
-      name: type.name + 'Collection',
+      name: name,
       fields: {
         collection: {
           type: new GraphQLList(type)
@@ -33,11 +33,15 @@ export function collectionType(
       if (args.next) {
         return JSONDataWithPath(args.next);
       }
-      var path = constructPath(args);
+      var path = constructPath(_, args);
+      if (path.indexOf('?') > -1) {
+        path += '&linked_partitioning=1';
+      } else {
+        path += '?linked_partitioning=1';
+      }
       if (args.limit) {
         path += '&limit=' + args.limit;
       }
-      path += '&linked_partitioning=1';
       return JSONDataWithPath(path);
     }
   };

@@ -903,5 +903,334 @@
       "comment_count": 29,
       "attachments_uri": "https://api.soundcloud.com/tracks/97561417/attachments"
     }
-  ]
+  ],
+  "/tracks/2/comments?limit=1": [
+    {
+      "kind": "comment",
+      "id": 264502049,
+      "created_at": "2016/01/11 09:59:30 +0000",
+      "user_id": 2,
+      "track_id": 2,
+      "timestamp": 42076,
+      "body": "🙌",
+      "uri": "https://api.soundcloud.com/comments/264502049",
+      "user": {
+        "id": 2,
+        "kind": "user",
+        "permalink": "eric",
+        "username": "Eric",
+        "last_modified": "2016/02/13 02:31:13 +0000",
+        "uri": "https://api.soundcloud.com/users/2",
+        "permalink_url": "http://soundcloud.com/eric",
+        "avatar_url": "https://i1.sndcdn.com/avatars-000153316546-tqxejr-large.jpg"
+      }
+    }
+  ],
+  "/users/2/tracks&limit=1&linked_partitioning=1": {
+    "errors": [
+      {
+        "error_message": "404 - Not Found"
+      }
+    ]
+  },
+  "/tracks?q=Boiler%20Room&linked_partitioning=1&limit=2": {
+    "collection": [
+      {
+        "download_url": "https://api.soundcloud.com/tracks/106484632/download",
+        "key_signature": "",
+        "user_favorite": false,
+        "likes_count": 27897,
+        "release": "",
+        "attachments_uri": "https://api.soundcloud.com/tracks/106484632/attachments",
+        "waveform_url": "https://w1.sndcdn.com/VBQ7ZZsoxXZ8_m.png",
+        "purchase_url": null,
+        "video_url": null,
+        "streamable": true,
+        "artwork_url": "https://i1.sndcdn.com/artworks-000055860945-sr4429-large.jpg",
+        "comment_count": 594,
+        "commentable": true,
+        "description": "Boiler Room Ibiza Villa Takeovers / Carl Cox & Friends: Carl Cox, Nic Fanciulli, Yousef, Layo & Bushwacka, Nicole Moudaber & Elio Riso.\r\n\r\n[Broadcasted on 15th August 2013]\r\n\r\nTracklist & video at boilerroom.tv",
+        "download_count": 63403,
+        "downloadable": true,
+        "embeddable_by": "all",
+        "favoritings_count": 0,
+        "genre": "Boiler Room",
+        "isrc": "",
+        "label_id": null,
+        "label_name": "",
+        "license": "all-rights-reserved",
+        "original_content_size": 105974845,
+        "original_format": "mp3",
+        "playback_count": 1009690,
+        "purchase_title": null,
+        "release_day": null,
+        "release_month": null,
+        "release_year": null,
+        "reposts_count": 5191,
+        "state": "finished",
+        "tag_list": "\"Boiler Room\" \"Carl Cox\"",
+        "track_type": "other",
+        "user": {
+          "avatar_url": "https://i1.sndcdn.com/avatars-000186360604-cblqsr-large.jpg",
+          "id": 752705,
+          "kind": "user",
+          "permalink_url": "http://soundcloud.com/platform",
+          "uri": "https://api.soundcloud.com/users/752705",
+          "username": "BOILER ROOM",
+          "permalink": "platform",
+          "last_modified": "2016/02/25 23:48:31 +0000"
+        },
+        "bpm": null,
+        "user_playback_count": null,
+        "id": 106484632,
+        "kind": "track",
+        "created_at": "2013/08/21 11:32:42 +0000",
+        "last_modified": "2016/02/24 23:16:58 +0000",
+        "permalink": "carl-cox-45-min-boiler-room",
+        "permalink_url": "https://soundcloud.com/platform/carl-cox-45-min-boiler-room",
+        "title": "Carl Cox 45 min Boiler Room Ibiza Villa Takeovers mix",
+        "duration": 2648986,
+        "sharing": "public",
+        "stream_url": "https://api.soundcloud.com/tracks/106484632/stream",
+        "uri": "https://api.soundcloud.com/tracks/106484632",
+        "user_id": 752705
+      },
+      {
+        "download_url": null,
+        "key_signature": "",
+        "user_favorite": false,
+        "likes_count": 31299,
+        "release": "",
+        "attachments_uri": "https://api.soundcloud.com/tracks/133118292/attachments",
+        "waveform_url": "https://w1.sndcdn.com/Kb1CjfILbzt0_m.png",
+        "purchase_url": null,
+        "video_url": null,
+        "streamable": true,
+        "artwork_url": "https://i1.sndcdn.com/artworks-000069983645-514ojd-large.jpg",
+        "comment_count": 731,
+        "commentable": true,
+        "description": "Want audio? Check out our free mobile app!\r\n\r\nBoiler Room London - DJ EZ, 3.5hr Set (w/Majestic MC)\r\n\r\nBroadcast on February 4th, 2014",
+        "download_count": 0,
+        "downloadable": false,
+        "embeddable_by": "all",
+        "favoritings_count": 0,
+        "genre": "Boiler Room",
+        "isrc": "",
+        "label_id": null,
+        "label_name": "",
+        "license": "all-rights-reserved",
+        "original_content_size": 196494778,
+        "original_format": "mp3",
+        "playback_count": 977395,
+        "purchase_title": null,
+        "release_day": null,
+        "release_month": null,
+        "release_year": null,
+        "reposts_count": 6930,
+        "state": "finished",
+        "tag_list": "\"DJ EZ\" EZ \"Boiler Room\" Garage London 2014",
+        "track_type": "other",
+        "user": {
+          "avatar_url": "https://i1.sndcdn.com/avatars-000186360604-cblqsr-large.jpg",
+          "id": 752705,
+          "kind": "user",
+          "permalink_url": "http://soundcloud.com/platform",
+          "uri": "https://api.soundcloud.com/users/752705",
+          "username": "BOILER ROOM",
+          "permalink": "platform",
+          "last_modified": "2016/02/25 23:48:31 +0000"
+        },
+        "bpm": null,
+        "user_playback_count": null,
+        "id": 133118292,
+        "kind": "track",
+        "created_at": "2014/02/05 01:50:37 +0000",
+        "last_modified": "2016/02/24 12:23:52 +0000",
+        "permalink": "dj-ez-boiler-room",
+        "permalink_url": "https://soundcloud.com/platform/dj-ez-boiler-room",
+        "title": "DJ EZ Boiler Room London 3.5Hr DJ Set",
+        "duration": 12309763,
+        "sharing": "public",
+        "stream_url": "https://api.soundcloud.com/tracks/133118292/stream",
+        "uri": "https://api.soundcloud.com/tracks/133118292",
+        "user_id": 752705
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/tracks?linked_partitioning=1&client_id=6f67f96d72c268d815e7a6f74f6552b5&offset=2&q=Boiler%20Room&limit=2"
+  },
+  "/users?q=Eric&linked_partitioning=1&limit=2": {
+    "collection": [
+      {
+        "playlist_count": 1,
+        "track_count": 117,
+        "subscriptions": [
+          {
+            "product": {
+              "id": "creator-pro-unlimited",
+              "name": "Pro Unlimited"
+            }
+          }
+        ],
+        "first_name": "Eric",
+        "last_name": "Prydz",
+        "full_name": "Eric Prydz",
+        "city": "LA",
+        "description": "Official page for Eric Prydz, Pryda Recordings, and Mouseville Records.",
+        "country": "United States",
+        "public_favorites_count": 0,
+        "followers_count": 701117,
+        "followings_count": 0,
+        "plan": "Pro Unlimited",
+        "myspace_name": null,
+        "discogs_name": null,
+        "website_title": "EricPrydz.TV",
+        "website": "http://www.ericprydz.tv",
+        "reposts_count": null,
+        "comments_count": null,
+        "online": false,
+        "likes_count": null,
+        "avatar_url": "https://i1.sndcdn.com/avatars-000200487144-xxcvat-large.jpg",
+        "id": 1038649,
+        "kind": "user",
+        "permalink_url": "http://soundcloud.com/eric-prydz",
+        "uri": "https://api.soundcloud.com/users/1038649",
+        "username": "Eric Prydz",
+        "permalink": "eric-prydz",
+        "last_modified": "2016/02/26 00:48:38 +0000"
+      },
+      {
+        "playlist_count": 0,
+        "track_count": 13,
+        "subscriptions": [
+          {
+            "product": {
+              "id": "free",
+              "name": "Free"
+            }
+          }
+        ],
+        "first_name": "Eric",
+        "last_name": "Hines",
+        "full_name": "Eric Hines",
+        "city": "Traverse City",
+        "description": "The podcast from WNMC Community Public Radio in Traverse City, MI. Listen, enjoy, support, talk back, volunteer. http://www.wnmc.org/support/",
+        "country": "United States",
+        "public_favorites_count": 0,
+        "followers_count": 330,
+        "followings_count": 5,
+        "plan": "Free",
+        "myspace_name": null,
+        "discogs_name": null,
+        "website_title": "WNMC::Community Public Radio",
+        "website": "http://www.wnmc.org",
+        "reposts_count": null,
+        "comments_count": null,
+        "online": false,
+        "likes_count": null,
+        "avatar_url": "https://i1.sndcdn.com/avatars-000037210899-9r6q2b-large.jpg",
+        "id": 4292003,
+        "kind": "user",
+        "permalink_url": "http://soundcloud.com/wnmcradio",
+        "uri": "https://api.soundcloud.com/users/4292003",
+        "username": "wnmcradio",
+        "permalink": "wnmcradio",
+        "last_modified": "2016/01/05 20:07:18 +0000"
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/users?linked_partitioning=1&client_id=6f67f96d72c268d815e7a6f74f6552b5&offset=2&q=Eric&limit=2"
+  },
+  "/users/2/tracks?linked_partitioning=1&limit=1": {
+    "collection": [
+      {
+        "kind": "track",
+        "id": 97561417,
+        "created_at": "2013/06/19 14:58:29 +0000",
+        "user_id": 2,
+        "duration": 1742060,
+        "commentable": true,
+        "state": "finished",
+        "original_content_size": 53128504,
+        "last_modified": "2013/11/18 23:55:47 +0000",
+        "sharing": "public",
+        "tag_list": "",
+        "permalink": "obamas-2013-berlin-speech-at",
+        "streamable": true,
+        "embeddable_by": "all",
+        "downloadable": true,
+        "purchase_url": null,
+        "label_id": null,
+        "purchase_title": null,
+        "genre": "Speech",
+        "title": "Obama's 2013 Berlin Speech at Pariser Platz",
+        "description": null,
+        "label_name": null,
+        "release": null,
+        "track_type": "recording",
+        "key_signature": null,
+        "isrc": null,
+        "video_url": null,
+        "bpm": null,
+        "release_year": null,
+        "release_month": null,
+        "release_day": null,
+        "original_format": "m4a",
+        "license": "all-rights-reserved",
+        "uri": "https://api.soundcloud.com/tracks/97561417",
+        "user": {
+          "id": 2,
+          "kind": "user",
+          "permalink": "eric",
+          "username": "Eric",
+          "last_modified": "2016/02/13 02:31:13 +0000",
+          "uri": "https://api.soundcloud.com/users/2",
+          "permalink_url": "http://soundcloud.com/eric",
+          "avatar_url": "https://i1.sndcdn.com/avatars-000153316546-tqxejr-large.jpg"
+        },
+        "created_with": {
+          "id": 124,
+          "kind": "app",
+          "name": "SoundCloud iOS",
+          "uri": "https://api.soundcloud.com/apps/124",
+          "permalink_url": "http://developers.soundcloud.com/",
+          "external_url": "http://itunes.com/app/soundcloud"
+        },
+        "permalink_url": "http://soundcloud.com/eric/obamas-2013-berlin-speech-at",
+        "artwork_url": "https://i1.sndcdn.com/artworks-000050975788-nvmhu0-large.jpg",
+        "waveform_url": "https://w1.sndcdn.com/BFDZdpoLucR8_m.png",
+        "stream_url": "https://api.soundcloud.com/tracks/97561417/stream",
+        "download_url": "https://api.soundcloud.com/tracks/97561417/download",
+        "playback_count": 3384,
+        "download_count": 121,
+        "favoritings_count": 41,
+        "comment_count": 29,
+        "attachments_uri": "https://api.soundcloud.com/tracks/97561417/attachments"
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/users/2/tracks?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1"
+  },
+  "/users/2/comments?linked_partitioning=1&limit=1": {
+    "collection": [
+      {
+        "kind": "comment",
+        "id": 264502049,
+        "created_at": "2016/01/11 09:59:30 +0000",
+        "user_id": 2,
+        "track_id": 2,
+        "timestamp": 42076,
+        "body": "🙌",
+        "uri": "https://api.soundcloud.com/comments/264502049",
+        "user": {
+          "id": 2,
+          "kind": "user",
+          "permalink": "eric",
+          "username": "Eric",
+          "last_modified": "2016/02/13 02:31:13 +0000",
+          "uri": "https://api.soundcloud.com/users/2",
+          "permalink_url": "http://soundcloud.com/eric",
+          "avatar_url": "https://i1.sndcdn.com/avatars-000153316546-tqxejr-large.jpg"
+        }
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/users/2/comments?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1"
+  }
 }

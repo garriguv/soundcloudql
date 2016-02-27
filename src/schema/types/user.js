@@ -3,13 +3,10 @@ import {
   GraphQLInt,
   GraphQLString,
   GraphQLNonNull,
-  GraphQLObjectType,
-  GraphQLList
+  GraphQLObjectType
 } from 'graphql';
 
-import {
-  JSONDataWithPath
-} from '../../api';
+import { collectionType } from './collection';
 
 import TrackType from './track';
 import CommentType from './comment';
@@ -63,30 +60,24 @@ var UserType = new GraphQLObjectType({
       description: 'The public track count of the user.',
       resolve: (user) => user.track_count
     },
-    tracksConnection: {
-      type: new GraphQLList(TrackType),
-      args: {
-        limit: { type: GraphQLInt }
-      },
-      description: 'The public tracks of the user.',
-      resolve: (root, args) => {
-        return JSONDataWithPath(
-          '/users/' + root.id +
-          '/tracks?limit=' + args.limit);
+    tracksCollection: collectionType(
+      'UserPublicTracksCollection',
+      TrackType,
+      'The public tracks of the user.',
+      {},
+      function (root) {
+        return '/users/' + root.id + '/tracks';
       }
-    },
-    commentsConnection: {
-      type: new GraphQLList(CommentType),
-      description: 'The comments by this user.',
-      args: {
-        limit: { type: GraphQLInt }
-      },
-      resolve: (root, args) => {
-        return JSONDataWithPath(
-          '/users/' + root.id +
-          '/comments?limit=' + args.limit);
+    ),
+    commentsCollection: collectionType(
+      'UserCommentsCollection',
+      CommentType,
+      'The public comments of the user.',
+      {},
+      function (root) {
+        return '/users/' + root.id + '/comments';
       }
-    }
+    )
   })
 });
 

@@ -25,7 +25,8 @@ describe('User type', function () {
     description
     playlistCount
     trackCount
-    tracksConnection(limit:1) { title }
+    tracksCollection(limit:1) { collection { title } }
+    commentsCollection(limit:1) { collection { body } }
   }
 }`;
     var expected = {
@@ -38,7 +39,12 @@ describe('User type', function () {
       description: 'Founder/CTO SoundCloud.\r\nMusician under the alias http://soundcloud.com/forss',
       playlistCount: 20,
       trackCount: 154,
-      tracksConnection: [ { title: 'Obama\'s 2013 Berlin Speech at Pariser Platz' } ]
+      tracksCollection: {
+        collection: [ { title: 'Obama\'s 2013 Berlin Speech at Pariser Platz' } ]
+      },
+      commentsCollection: {
+        collection: [ { body: '🙌' } ]
+      }
     };
     return soundcloud(query).then(function (result) {
       expect(result.data.user).to.deep.equal(expected);

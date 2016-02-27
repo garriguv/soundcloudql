@@ -11,8 +11,8 @@ import { LicenseType, TrackType } from './track';
 import UserType from './user';
 
 var SearchUsersType = collectionType(
+  'SearchUsersCollection',
   UserType,
-  'user',
   'Search for users on SoundCloud',
   {
     q: {
@@ -20,13 +20,13 @@ var SearchUsersType = collectionType(
       description: 'The search query.'
     }
   },
-  function (args) {
+  function (root, args) {
     return '/users?q=' + encodeURIComponent(args.q);
   });
 
 var SearchTracksType = collectionType(
+  'SearchTracksCollection',
   TrackType,
-  'track',
   'Search for tracks on SoundCloud',
   {
     q: {
@@ -55,7 +55,7 @@ var SearchTracksType = collectionType(
     },
     license: { type: LicenseType }
   },
-  function (args) {
+  function (root, args) {
     let path = '/tracks?q=' + encodeURIComponent(args.q);
     if (args.tags) {
       path += '&tags=' + encodeURIComponent(args.tags.join());
