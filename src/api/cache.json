@@ -1359,5 +1359,71 @@
       }
     ],
     "next_href": "https://api.soundcloud.com/users/2/followings?page_size=1&linked_partitioning=1&client_id=6f67f96d72c268d815e7a6f74f6552b5&cursor=1456511773000"
+  },
+  "/users/2/groups?linked_partitioning=1&limit=1": {
+    "collection": [
+      {
+        "kind": "group",
+        "id": 17514,
+        "created_at": "2010/12/21 17:50:28 +0000",
+        "permalink": "techno-1",
+        "track_count": 49648,
+        "members_count": 12773,
+        "moderated": false,
+        "contributors_count": 8017,
+        "name": "MINIMAL TECHNO",
+        "short_description": "Follow now, Please! Soundcloud.com/deibe",
+        "description": "Underground techno music with balls.&#13;\n&#13;\nJust remember that... &#13;\nHouse is not Minimal Techno &#13;\nElectro is not Minimal Techno &#13;\nClub music is not Minimal Techno  &#13;\nThat shitty glitch/shuffle/fidget crap is not Minimal Techno &#13;\nHell, even Tech-house is not Minimal Techno &#13;\n<b>Minimal Techno  is Minimal Techno <b>&#13;\n&#13;\nLet's get back to the underground!&#13;\n&#13;\n&#13;\n<b>Follow Me on SoundCloud:&#13;\nhttp://soundcloud.com/deibe&#13;\nhttp://soundcloud.com/deibe&#13;\nhttp://soundcloud.com/deibe<b></b></b></b></b>",
+        "uri": "https://api.soundcloud.com/groups/17514",
+        "artwork_url": "https://i1.sndcdn.com/artworks-000003718651-qd0imj-large.jpg",
+        "permalink_url": "http://soundcloud.com/groups/techno-1",
+        "creator": {
+          "id": 2448545,
+          "kind": "user",
+          "permalink": "backkenergy",
+          "username": "Lord.",
+          "last_modified": "2011/07/21 14:48:42 +0000",
+          "uri": "https://api.soundcloud.com/users/2448545",
+          "permalink_url": "http://soundcloud.com/backkenergy",
+          "avatar_url": "https://i1.sndcdn.com/avatars-000003731057-pe9zpz-large.jpg"
+        }
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/users/2/groups?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1"
+  },
+  "/users/2/followers?linked_partitioning=1&limit=1": {
+    "collection": [
+      {
+        "first_name": "",
+        "last_name": "",
+        "full_name": "",
+        "city": "murmansk",
+        "description": null,
+        "country": null,
+        "track_count": 0,
+        "public_favorites_count": 0,
+        "followers_count": 0,
+        "followings_count": 189,
+        "plan": "Free",
+        "myspace_name": null,
+        "discogs_name": null,
+        "website_title": null,
+        "website": null,
+        "reposts_count": null,
+        "comments_count": null,
+        "online": false,
+        "likes_count": null,
+        "playlist_count": null,
+        "avatar_url": "https://i1.sndcdn.com/avatars-000207968192-ij0cje-large.jpg",
+        "id": 208848497,
+        "kind": "user",
+        "permalink_url": "http://soundcloud.com/viktiria",
+        "uri": "https://api.soundcloud.com/users/208848497",
+        "username": "viktiria",
+        "permalink": "viktiria",
+        "last_modified": "2016/02/27 11:43:41 +0000"
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/users/2/followers?page_size=1&linked_partitioning=1&client_id=6f67f96d72c268d815e7a6f74f6552b5&cursor=1456575754000"
   }
 }

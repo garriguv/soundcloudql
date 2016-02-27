@@ -48,7 +48,7 @@ describe('User type', function () {
       commentsCollection: { collection: [ { body: '🙌' } ] },
       followersCollection: { collection: [ { username: 'viktiria' }] },
       followingsCollection: { collection: [ { username: 'Florence + The Machine' }] },
-      groupsCollection: { collection: [ { name: 'Dubstep' }] }
+      groupsCollection: { collection: [ { name: 'MINIMAL TECHNO' }] }
     };
     return soundcloud(query).then(function (result) {
       expect(result.data.user).to.deep.equal(expected);
