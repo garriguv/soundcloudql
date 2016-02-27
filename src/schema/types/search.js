@@ -3,20 +3,36 @@ import {
   GraphQLString,
   GraphQLNonNull,
   GraphQLList,
-  GraphQLInputObjectType
+  GraphQLInputObjectType,
 } from 'graphql';
 
-import {
-  JSONDataWithPath
-} from '../../api';
-
+import { collectionType } from './collection';
 import { LicenseType, TrackType } from './track';
 import UserType from './user';
 
-var SearchTracksType = {
-  type: new GraphQLList(TrackType),
-  args: {
-    q: {type: new GraphQLNonNull(GraphQLString)},
+var SearchUsersType = collectionType(
+  UserType,
+  'user',
+  'Search for users on SoundCloud',
+  {
+    q: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: 'The search query.'
+    }
+  },
+  function (args) {
+    return '/users?q=' + encodeURIComponent(args.q);
+  });
+
+var SearchTracksType = collectionType(
+  TrackType,
+  'track',
+  'Search for tracks on SoundCloud',
+  {
+    q: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: 'The search query.'
+    },
     tags: {type: new GraphQLList(GraphQLString)},
     genres: {type: new GraphQLList(GraphQLString)},
     bpm: {
@@ -39,8 +55,7 @@ var SearchTracksType = {
     },
     license: { type: LicenseType }
   },
-  description: 'Search for tracks on SoundCloud.',
-  resolve: (_, args) => {
+  function (args) {
     let path = '/tracks?q=' + encodeURIComponent(args.q);
     if (args.tags) {
       path += '&tags=' + encodeURIComponent(args.tags.join());
@@ -59,26 +74,8 @@ var SearchTracksType = {
     if (args.license) {
       path += '&license=' + args.license;
     }
-    path += '&linked_partitioning=1';
-    return JSONDataWithPath(path).then(function (json) {
-      return json['collection'];
-    });
-  }
-};
-
-var SearchUsersType = {
-  type: new GraphQLList(UserType),
-  args: {
-    q: { type: new GraphQLNonNull(GraphQLString) }
-  },
-  description: 'Search for users on SoundCloud.',
-  resolve: (_, args) => {
-    return JSONDataWithPath('/users?q=' + args.q + '&linked_partitioning=1')
-      .then(function (json) {
-        return json['collection'];
-      });
-  }
-};
+    return path;
+  });
 
 export {
   SearchTracksType as default,
