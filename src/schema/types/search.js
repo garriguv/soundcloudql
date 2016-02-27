@@ -37,7 +37,7 @@ var SearchTracksType = {
         }
       })
     },
-    license: {type: LicenseType }
+    license: { type: LicenseType }
   },
   description: 'Search for tracks on SoundCloud.',
   resolve: (_, args) => {
@@ -59,7 +59,10 @@ var SearchTracksType = {
     if (args.license) {
       path += '&license=' + args.license;
     }
-    return JSONDataWithPath(path);
+    path += '&linked_partitioning=1';
+    return JSONDataWithPath(path).then(function (json) {
+      return json['collection'];
+    });
   }
 };
 
@@ -70,7 +73,10 @@ var SearchUsersType = {
   },
   description: 'Search for users on SoundCloud.',
   resolve: (_, args) => {
-    return JSONDataWithPath('/users?q=' + args.q);
+    return JSONDataWithPath('/users?q=' + args.q + '&linked_partitioning=1')
+      .then(function (json) {
+        return json['collection'];
+      });
   }
 };
 
