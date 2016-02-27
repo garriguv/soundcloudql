@@ -13,6 +13,7 @@ import TrackType from './types/track';
 import UserType from './types/user';
 import PlaylistType from './types/playlist';
 import CommentType from './types/comment';
+import GroupType from './types/group';
 import {
   SearchTracksType,
   SearchPlaylistsType,
@@ -78,6 +79,7 @@ var rootType = new GraphQLObjectType({
         }
       }
     },
+    group: GroupType,
     searchTracks: SearchTracksType,
     searchPlaylists: SearchPlaylistsType,
     searchUsers: SearchUsersType

@@ -975,5 +975,264 @@
       }
     ],
     "next_href": "https://api.soundcloud.com/users/2/tracks?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1"
+  },
+  "/groups/3": {
+    "kind": "group",
+    "id": 3,
+    "created_at": "2009/06/18 15:46:46 +0000",
+    "permalink": "made-with-ableton-live",
+    "track_count": 85899,
+    "members_count": 23008,
+    "moderated": false,
+    "contributors_count": 12088,
+    "name": "Made with Ableton Live!",
+    "short_description": "tracks produced with Ableton Live! music software, no DJ mixes!",
+    "description": "send your tracks, no DJ mixes please!",
+    "uri": "https://api.soundcloud.com/groups/3",
+    "artwork_url": "https://i1.sndcdn.com/artworks-000000481400-f0ynk3-large.jpg",
+    "permalink_url": "http://soundcloud.com/groups/made-with-ableton-live",
+    "creator": {
+      "id": 552892,
+      "kind": "user",
+      "permalink": "ableton",
+      "username": "Ableton",
+      "last_modified": "2016/02/25 13:37:49 +0000",
+      "uri": "https://api.soundcloud.com/users/552892",
+      "permalink_url": "http://soundcloud.com/ableton",
+      "avatar_url": "https://i1.sndcdn.com/avatars-000025200993-wurlil-large.jpg"
+    }
+  },
+  "/groups/3/contributors?linked_partitioning=1&limit=1": {
+    "next_href": "https://api.soundcloud.com/groups/3/contributors?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1",
+    "collection": [
+      {
+        "id": 206740300,
+        "kind": "user",
+        "permalink": "bridges-183897992",
+        "username": "bridges",
+        "last_modified": "2016/02/19 23:40:58 +0000",
+        "uri": "https://api.soundcloud.com/users/206740300",
+        "permalink_url": "http://soundcloud.com/bridges-183897992",
+        "avatar_url": "https://i1.sndcdn.com/avatars-000206119082-ynb8y3-large.jpg",
+        "country": null,
+        "first_name": "",
+        "last_name": "",
+        "full_name": "",
+        "description": null,
+        "city": null,
+        "discogs_name": null,
+        "myspace_name": null,
+        "website": null,
+        "website_title": null,
+        "online": false,
+        "track_count": 1,
+        "playlist_count": 1,
+        "plan": "Free",
+        "public_favorites_count": 28,
+        "subscriptions": [],
+        "followers_count": 29,
+        "followings_count": 29
+      }
+    ]
+  },
+  "/groups/3/members?linked_partitioning=1&limit=1": {
+    "next_href": "https://api.soundcloud.com/groups/3/members?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1",
+    "collection": [
+      {
+        "id": 206740300,
+        "kind": "user",
+        "permalink": "bridges-183897992",
+        "username": "bridges",
+        "last_modified": "2016/02/19 23:40:58 +0000",
+        "uri": "https://api.soundcloud.com/users/206740300",
+        "permalink_url": "http://soundcloud.com/bridges-183897992",
+        "avatar_url": "https://i1.sndcdn.com/avatars-000206119082-ynb8y3-large.jpg",
+        "country": null,
+        "first_name": "",
+        "last_name": "",
+        "full_name": "",
+        "description": null,
+        "city": null,
+        "discogs_name": null,
+        "myspace_name": null,
+        "website": null,
+        "website_title": null,
+        "online": false,
+        "track_count": 1,
+        "playlist_count": 1,
+        "plan": "Free",
+        "public_favorites_count": 28,
+        "subscriptions": [],
+        "followers_count": 29,
+        "followings_count": 29
+      }
+    ]
+  },
+  "/users/552892": {
+    "id": 552892,
+    "kind": "user",
+    "permalink": "ableton",
+    "username": "Ableton",
+    "last_modified": "2016/02/25 13:37:49 +0000",
+    "uri": "https://api.soundcloud.com/users/552892",
+    "permalink_url": "http://soundcloud.com/ableton",
+    "avatar_url": "https://i1.sndcdn.com/avatars-000025200993-wurlil-large.jpg",
+    "country": "Germany",
+    "first_name": "",
+    "last_name": "",
+    "full_name": "",
+    "description": "The official SoundCloud of Ableton. We make Ableton Live, a unique environment for producing and performing music with a computer.\r\n\r\nYou can find samples of Ableton Instruments, Partner Instruments, Max for Live instruments, and some exclusive tracks from Ableton Artists here.",
+    "city": "Berlin",
+    "discogs_name": null,
+    "myspace_name": null,
+    "website": "http://www.ableton.com",
+    "website_title": "",
+    "online": false,
+    "track_count": 884,
+    "playlist_count": 130,
+    "plan": "Pro Plus",
+    "public_favorites_count": 0,
+    "subscriptions": [
+      {
+        "product": {
+          "id": "creator-pro-unlimited",
+          "name": "Pro Unlimited"
+        }
+      }
+    ],
+    "followers_count": 140476,
+    "followings_count": 5
+  },
+  "/groups/3/users?linked_partitioning=1&limit=1": {
+    "next_href": "https://api.soundcloud.com/groups/3/users?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1",
+    "collection": [
+      {
+        "id": 206740300,
+        "kind": "user",
+        "permalink": "bridges-183897992",
+        "username": "bridges",
+        "last_modified": "2016/02/19 23:40:58 +0000",
+        "uri": "https://api.soundcloud.com/users/206740300",
+        "permalink_url": "http://soundcloud.com/bridges-183897992",
+        "avatar_url": "https://i1.sndcdn.com/avatars-000206119082-ynb8y3-large.jpg",
+        "country": null,
+        "first_name": "",
+        "last_name": "",
+        "full_name": "",
+        "description": null,
+        "city": null,
+        "discogs_name": null,
+        "myspace_name": null,
+        "website": null,
+        "website_title": null,
+        "online": false,
+        "track_count": 1,
+        "playlist_count": 1,
+        "plan": "Free",
+        "public_favorites_count": 28,
+        "subscriptions": [],
+        "followers_count": 29,
+        "followings_count": 29
+      }
+    ]
+  },
+  "/groups/3/tracks?linked_partitioning=1&limit=1": {
+    "collection": [
+      {
+        "kind": "track",
+        "id": 248642973,
+        "created_at": "2016/02/24 09:35:55 +0000",
+        "user_id": 10028455,
+        "duration": 390122,
+        "commentable": true,
+        "state": "finished",
+        "original_content_size": 15757090,
+        "last_modified": "2016/02/24 09:35:56 +0000",
+        "sharing": "public",
+        "tag_list": "",
+        "permalink": "colours-ft-veronika-wildova",
+        "streamable": true,
+        "embeddable_by": "all",
+        "downloadable": false,
+        "purchase_url": null,
+        "label_id": null,
+        "purchase_title": null,
+        "genre": "Melodic",
+        "title": "Colours ft. Veronika Wildova",
+        "description": "From the EP, Chance Encounter (to be released May 2016)",
+        "label_name": null,
+        "release": null,
+        "track_type": null,
+        "key_signature": null,
+        "isrc": null,
+        "video_url": null,
+        "bpm": null,
+        "release_year": null,
+        "release_month": null,
+        "release_day": null,
+        "original_format": "mp3",
+        "license": "all-rights-reserved",
+        "uri": "https://api.soundcloud.com/tracks/248642973",
+        "user": {
+          "id": 10028455,
+          "kind": "user",
+          "permalink": "soundgrounder",
+          "username": "Soundgrounder",
+          "last_modified": "2016/02/26 11:00:55 +0000",
+          "uri": "https://api.soundcloud.com/users/10028455",
+          "permalink_url": "http://soundcloud.com/soundgrounder",
+          "avatar_url": "https://i1.sndcdn.com/avatars-000138610308-fm9m38-large.jpg"
+        },
+        "permalink_url": "http://soundcloud.com/soundgrounder/colours-ft-veronika-wildova",
+        "artwork_url": "https://i1.sndcdn.com/artworks-000148416006-u7gw4j-large.jpg",
+        "waveform_url": "https://w1.sndcdn.com/YEehNmhT3Ber_m.png",
+        "stream_url": "https://api.soundcloud.com/tracks/248642973/stream",
+        "playback_count": 63,
+        "download_count": 0,
+        "favoritings_count": 4,
+        "comment_count": 1,
+        "attachments_uri": "https://api.soundcloud.com/tracks/248642973/attachments"
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/groups/3/tracks?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1&order=approved_at"
+  },
+  "/groups/3/moderators?linked_partitioning=1&limit=1": {
+    "collection": [
+      {
+        "id": 552892,
+        "kind": "user",
+        "permalink": "ableton",
+        "username": "Ableton",
+        "last_modified": "2016/02/25 13:37:49 +0000",
+        "uri": "https://api.soundcloud.com/users/552892",
+        "permalink_url": "http://soundcloud.com/ableton",
+        "avatar_url": "https://i1.sndcdn.com/avatars-000025200993-wurlil-large.jpg",
+        "country": "Germany",
+        "first_name": "",
+        "last_name": "",
+        "full_name": "",
+        "description": "The official SoundCloud of Ableton. We make Ableton Live, a unique environment for producing and performing music with a computer.\r\n\r\nYou can find samples of Ableton Instruments, Partner Instruments, Max for Live instruments, and some exclusive tracks from Ableton Artists here.",
+        "city": "Berlin",
+        "discogs_name": null,
+        "myspace_name": null,
+        "website": "http://www.ableton.com",
+        "website_title": "",
+        "online": false,
+        "track_count": 884,
+        "playlist_count": 130,
+        "plan": "Pro Plus",
+        "public_favorites_count": 0,
+        "subscriptions": [
+          {
+            "product": {
+              "id": "creator-pro-unlimited",
+              "name": "Pro Unlimited"
+            }
+          }
+        ],
+        "followers_count": 140476,
+        "followings_count": 5
+      }
+    ]
   }
 }
