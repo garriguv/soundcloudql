@@ -2,6 +2,8 @@ import { expect } from 'chai';
 import { describe, it } from 'mocha';
 import { soundcloud } from './soundcloudql';
 
+/* eslint-disable max-len */
+
 describe('Track type', function () {
   it('Gets an object by id', function () {
     var query = `{ track(id: 2) { title }}`;
@@ -16,6 +18,12 @@ describe('Track type', function () {
   track(id: 2) {
     id
     title
+    createdAt
+    description
+    commentCount
+    downloadCount
+    playbackCount
+    likeCount
     permalinkUrl
     streamUrl
     waveformUrl
@@ -29,6 +37,12 @@ describe('Track type', function () {
     var expected = {
       id: '2',
       title: 'Electro 1',
+      createdAt: '2007/07/21 23:29:05 +0000',
+      description: 'This was the first track I did in about 10 minutes to test the logic installation on my new macbook. I only had one sample on the computer at the time…',
+      commentCount: 72,
+      downloadCount: 4526,
+      playbackCount: 27243,
+      likeCount: null,
       permalinkUrl: 'http://soundcloud.com/eric/oberholz5',
       streamUrl: 'https://api.soundcloud.com/tracks/2/stream',
       waveformUrl: 'https://w1.sndcdn.com/KcoNolQWb1bB_m.png',

@@ -73,6 +73,36 @@ var TrackType = new GraphQLObjectType({
       description: 'The title of the track.',
       resolve: (track) => track.title
     },
+    createdAt: {
+      type: GraphQLString,
+      description: 'The creation date of the track.',
+      resolve: (track) => track.created_at
+    },
+    description: {
+      type: GraphQLString,
+      description: 'The description of the track.',
+      resolve: (track) => track.description
+    },
+    commentCount: {
+      type: GraphQLInt,
+      description: 'The number of comments of the track.',
+      resolve: (track) => track.comment_count
+    },
+    downloadCount: {
+      type: GraphQLInt,
+      description: 'The number of downloads of the track.',
+      resolve: (track) => track.download_count
+    },
+    playbackCount: {
+      type: GraphQLInt,
+      description: 'The number of plays of the track.',
+      resolve: (track) => track.playback_count
+    },
+    likeCount: {
+      type: GraphQLInt,
+      description: 'The number of likes of the track.',
+      resolve: (track) => track.likeCount
+    },
     permalinkUrl: {
       type: new GraphQLNonNull(GraphQLString),
       description: 'The permalink URL of the track.',
