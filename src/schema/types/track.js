@@ -4,8 +4,7 @@ import {
   GraphQLInt,
   GraphQLString,
   GraphQLNonNull,
-  GraphQLObjectType,
-  GraphQLList
+  GraphQLObjectType
 } from 'graphql';
 
 import {
@@ -98,6 +97,11 @@ var TrackType = new GraphQLObjectType({
       type: GraphQLInt,
       description: 'The duration of the track in milliseconds.',
       resolve: (track) => track.duration
+    },
+    license: {
+      type: LicenseType,
+      description: 'The license of the track.',
+      resolve: (track) => track.license
     },
     userConnection: {
       type: UserType,

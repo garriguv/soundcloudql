@@ -21,6 +21,7 @@ describe('Track type', function () {
     waveformUrl
     artworkUrl
     duration
+    license
     userConnection { username }
     commentsCollection(limit: 1) { collection { timestamp } }
   }
@@ -33,6 +34,7 @@ describe('Track type', function () {
       waveformUrl: 'https://w1.sndcdn.com/KcoNolQWb1bB_m.png',
       artworkUrl: null,
       duration: 45760,
+      license: null,
       userConnection: { username: 'Eric' },
       commentsCollection: {
         collection: [ { timestamp: 42076 } ]
