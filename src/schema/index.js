@@ -1,10 +1,8 @@
 import {
   GraphQLID,
-  GraphQLList,
   GraphQLNonNull,
   GraphQLObjectType,
-  GraphQLSchema,
-  GraphQLString
+  GraphQLSchema
 } from 'graphql';
 
 import {
@@ -15,7 +13,10 @@ import TrackType from './types/track';
 import UserType from './types/user';
 import PlaylistType from './types/playlist';
 import CommentType from './types/comment';
-import SearchTracksType from './types/search';
+import {
+  SearchTracksType,
+  SearchUsersType
+} from './types/search';
 
 var rootType = new GraphQLObjectType({
   name: 'Root',
@@ -34,7 +35,6 @@ var rootType = new GraphQLObjectType({
         }
       }
     },
-    searchTracks: SearchTracksType,
     user: {
       type: UserType,
       args: {
@@ -47,16 +47,6 @@ var rootType = new GraphQLObjectType({
         } else {
           throw new Error('must provide id');
         }
-      }
-    },
-    users: {
-      type: new GraphQLList(UserType),
-      args: {
-        q: { type: new GraphQLNonNull(GraphQLString) }
-      },
-      description: 'Search for users',
-      resolve: (_, args) => {
-        return JSONDataWithPath('/users?q=' + args.q);
       }
     },
     playlist: {
@@ -86,7 +76,9 @@ var rootType = new GraphQLObjectType({
           throw new Error('must provide id');
         }
       }
-    }
+    },
+    searchTracks: SearchTracksType,
+    searchUsers: SearchUsersType
   })
 });
 

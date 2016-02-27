@@ -11,12 +11,12 @@ import {
 } from '../../api';
 
 import { LicenseType, TrackType } from './track';
-// import UserType from './user';
+import UserType from './user';
 
 var SearchTracksType = {
   type: new GraphQLList(TrackType),
   args: {
-    query: {type: new GraphQLNonNull(GraphQLString)},
+    q: {type: new GraphQLNonNull(GraphQLString)},
     tags: {type: new GraphQLList(GraphQLString)},
     genres: {type: new GraphQLList(GraphQLString)},
     bpm: {
@@ -41,7 +41,7 @@ var SearchTracksType = {
   },
   description: 'Search for tracks on SoundCloud.',
   resolve: (_, args) => {
-    let path = '/tracks?q=' + encodeURIComponent(args.query);
+    let path = '/tracks?q=' + encodeURIComponent(args.q);
     if (args.tags) {
       path += '&tags=' + encodeURIComponent(args.tags.join());
     }
@@ -63,4 +63,19 @@ var SearchTracksType = {
   }
 };
 
-export default SearchTracksType;
+var SearchUsersType = {
+  type: new GraphQLList(UserType),
+  args: {
+    q: { type: new GraphQLNonNull(GraphQLString) }
+  },
+  description: 'Search for users on SoundCloud.',
+  resolve: (_, args) => {
+    return JSONDataWithPath('/users?q=' + args.q);
+  }
+};
+
+export {
+  SearchTracksType as default,
+  SearchTracksType,
+  SearchUsersType
+};

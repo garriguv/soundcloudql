@@ -1321,5 +1321,387 @@
       "uri": "https://api.soundcloud.com/tracks/109724948",
       "user_id": 752705
     }
+  ],
+  "/users?q=Eric": [
+    {
+      "playlist_count": 1,
+      "track_count": 117,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric",
+      "last_name": "Prydz",
+      "full_name": "Eric Prydz",
+      "city": "LA",
+      "description": "Official page for Eric Prydz, Pryda Recordings, and Mouseville Records.",
+      "country": "United States",
+      "public_favorites_count": 0,
+      "followers_count": 701097,
+      "followings_count": 0,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "EricPrydz.TV",
+      "website": "http://www.ericprydz.tv",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000200487144-xxcvat-large.jpg",
+      "id": 1038649,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/eric-prydz",
+      "uri": "https://api.soundcloud.com/users/1038649",
+      "username": "Eric Prydz",
+      "permalink": "eric-prydz",
+      "last_modified": "2016/02/26 00:48:38 +0000"
+    },
+    {
+      "playlist_count": 0,
+      "track_count": 13,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "free",
+            "name": "Free"
+          }
+        }
+      ],
+      "first_name": "Eric",
+      "last_name": "Hines",
+      "full_name": "Eric Hines",
+      "city": "Traverse City",
+      "description": "The podcast from WNMC Community Public Radio in Traverse City, MI. Listen, enjoy, support, talk back, volunteer. http://www.wnmc.org/support/",
+      "country": "United States",
+      "public_favorites_count": 0,
+      "followers_count": 330,
+      "followings_count": 5,
+      "plan": "Free",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "WNMC::Community Public Radio",
+      "website": "http://www.wnmc.org",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000037210899-9r6q2b-large.jpg",
+      "id": 4292003,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/wnmcradio",
+      "uri": "https://api.soundcloud.com/users/4292003",
+      "username": "wnmcradio",
+      "permalink": "wnmcradio",
+      "last_modified": "2016/01/05 20:07:18 +0000"
+    },
+    {
+      "playlist_count": 20,
+      "track_count": 154,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric",
+      "last_name": "Wahlforss",
+      "full_name": "Eric Wahlforss",
+      "city": "Berlin",
+      "description": "Founder/CTO SoundCloud.\r\nMusician under the alias http://soundcloud.com/forss",
+      "country": "Germany",
+      "public_favorites_count": 0,
+      "followers_count": 44653,
+      "followings_count": 1654,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "My Blog",
+      "website": "http://eric.wahlforss.com",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000153316546-tqxejr-large.jpg",
+      "id": 2,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/eric",
+      "uri": "https://api.soundcloud.com/users/2",
+      "username": "Eric",
+      "permalink": "eric",
+      "last_modified": "2016/02/13 02:31:13 +0000"
+    },
+    {
+      "playlist_count": 1,
+      "track_count": 36,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric ",
+      "last_name": "Dingus",
+      "full_name": "Eric  Dingus",
+      "city": "Austin",
+      "description": "www.ericdingus.net\n\nSerious Inquiries : James : contact@dreamsequencerecords.com\n\nCo-Owner  of Dream Sequence Records:\n\nhttps://soundcloud.com/dream-sequence-records\n\n\n\n\n",
+      "country": null,
+      "public_favorites_count": 0,
+      "followers_count": 32207,
+      "followings_count": 209,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "Bandcamp",
+      "website": "https://ericdingus.bandcamp.com/",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000157502459-kpaowu-large.jpg",
+      "id": 11313687,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/eric-dingus",
+      "uri": "https://api.soundcloud.com/users/11313687",
+      "username": "Eric Dingus",
+      "permalink": "eric-dingus",
+      "last_modified": "2016/02/21 16:33:32 +0000"
+    },
+    {
+      "playlist_count": 4,
+      "track_count": 26,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric",
+      "last_name": "Wahlforss",
+      "full_name": "Eric Wahlforss",
+      "city": "Berlin",
+      "description": "Musician & Founder/CTO SoundCloud",
+      "country": "Germany",
+      "public_favorites_count": 0,
+      "followers_count": 132843,
+      "followings_count": 1287,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "Forss Official Site",
+      "website": "http://forssmusic.com",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000012778523-59quu3-large.jpg",
+      "id": 183,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/forss",
+      "uri": "https://api.soundcloud.com/users/183",
+      "username": "Forss",
+      "permalink": "forss",
+      "last_modified": "2016/02/23 18:10:19 +0000"
+    },
+    {
+      "playlist_count": 14,
+      "track_count": 91,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric",
+      "last_name": "Lau",
+      "full_name": "Eric Lau",
+      "city": "London, Hong Kong, Jupiter",
+      "description": "Music Producer/DJ/Mix Engineer/Teacher\nBookings: info@ericlaumusic.com",
+      "country": null,
+      "public_favorites_count": 0,
+      "followers_count": 23271,
+      "followings_count": 63,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "",
+      "website": "http://www.ericlaumusic.com",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000135515948-z9zvb6-large.jpg",
+      "id": 454338,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/ericlaumusic",
+      "uri": "https://api.soundcloud.com/users/454338",
+      "username": "Eric Lau",
+      "permalink": "ericlaumusic",
+      "last_modified": "2016/02/23 07:13:55 +0000"
+    },
+    {
+      "playlist_count": 13,
+      "track_count": 111,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric",
+      "last_name": "Bellinger",
+      "full_name": "Eric Bellinger",
+      "city": "",
+      "description": "For all inquiries contact yfsniem@gmail.com \nFor booking inquiries please contact ICM Partners: MDavies@icmpartners.com",
+      "country": null,
+      "public_favorites_count": 0,
+      "followers_count": 64023,
+      "followings_count": 24,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "",
+      "website": "http://www.EricBellinger.com",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000190405207-noamzc-large.jpg",
+      "id": 5180201,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/ericbellingermusic",
+      "uri": "https://api.soundcloud.com/users/5180201",
+      "username": "Eric Bellinger",
+      "permalink": "ericbellingermusic",
+      "last_modified": "2016/02/18 14:23:06 +0000"
+    },
+    {
+      "playlist_count": 0,
+      "track_count": 36,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric Lampaert & Dr. Jack De Havas",
+      "last_name": "",
+      "full_name": "Eric Lampaert & Dr. Jack De Havas",
+      "city": "London",
+      "description": "Coffee Ramblings isn't everyone's cup of tea. \"Enthusiastic, eccentric, if occasionally self indulgent\" (Chortle)... Occasionally? D'you mean always? ",
+      "country": "Britain (UK)",
+      "public_favorites_count": 0,
+      "followers_count": 383796,
+      "followings_count": 2,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "Eric's site",
+      "website": "http://www.ericlampaert.com",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000024487645-c5wd6s-large.jpg",
+      "id": 13081757,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/coffeeramblings",
+      "uri": "https://api.soundcloud.com/users/13081757",
+      "username": "Coffee Ramblings",
+      "permalink": "coffeeramblings",
+      "last_modified": "2016/01/28 17:16:02 +0000"
+    },
+    {
+      "playlist_count": 32,
+      "track_count": 256,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric",
+      "last_name": "Sneo",
+      "full_name": "Eric Sneo",
+      "city": "Mainz",
+      "description": "Eric Sneo's Upcoming Gigs\r\nSat 29 Nov, 14 \r\nTanz der Familie : Palazzo, Bingen, Germany\r\n\r\nPowered by GigaTools\r\n\r\n",
+      "country": "Germany",
+      "public_favorites_count": 0,
+      "followers_count": 13587,
+      "followings_count": 3,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "Web",
+      "website": "http://www.ericsneo.de/",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000154926482-o2pmlb-large.jpg",
+      "id": 2461488,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/ericsneo",
+      "uri": "https://api.soundcloud.com/users/2461488",
+      "username": "Eric Sneo",
+      "permalink": "ericsneo",
+      "last_modified": "2016/02/23 14:32:29 +0000"
+    },
+    {
+      "playlist_count": 16,
+      "track_count": 118,
+      "subscriptions": [
+        {
+          "product": {
+            "id": "creator-pro-unlimited",
+            "name": "Pro Unlimited"
+          }
+        }
+      ],
+      "first_name": "Eric",
+      "last_name": "Whitacre",
+      "full_name": "Eric Whitacre",
+      "city": "",
+      "description": "\"Whitacre is that rare thing, a modern composer who is both popular and original\"\n- The Daily Telegraph, London\n\nEric has inspired millions as composer, conductor, innovator, broadcaster and charismatic public speaker. His compositions rank among the most popular and frequently performed of the early 21st century, their reach broadened since 2010 by the extraordinary success of his online Virtual Choir project. Light & Gold, his first album as composer and conductor, won the 2012 Grammy® Award for Best Choral Recording and instantly topped the US and UK classical album charts.\n\nBorn in Nevada, he discovered a passion for choral music while studying at UNLV and he began composing soon after. He went on to study at the Juilliard School of Music in New York under John Corigliano. Many of his choral compositions, Cloudburst, Lux Aurumque and Sleep among them, have entered the standard choral repertoire and his orchestral music has been performed by some of the world’s most distinguished orchestras both sides of the Atlantic. Eric is currently Composer-in-Residence at Sidney Sussex College, Cambridge University, UK.\n\nA distinguished speaker, Eric has been invited to address the UN Leaders Programme, give the closing plenary at Davos World Economic Forum and to speak for UNICEF and Google among others. He has appeared twice on the main stage at the global TED conference in Long Beach CA, earning standing ovations on both occasions. Recent Virtual Choir projects include ‘Glow’ written for the Winter Dreams holiday show at Disneyland© Adventure California and the Virtual Youth Choir, in association with UNICEF, which premiered at the Glasgow 2014 Commonwealth Games. Broadcast live to 119 countries worldwide, Eric made his iTunes Festival debut with his professional choir in 2014, inviting multi award-winning composer and conductor Hans Zimmer to join him on stage. The performance was consequently released as a live album. Eric returned to the Minnesota Orchestra for a second residency in 2015 culminating in three performances at Orchestra Hall.\n",
+      "country": null,
+      "public_favorites_count": 0,
+      "followers_count": 13201,
+      "followings_count": 6,
+      "plan": "Pro Unlimited",
+      "myspace_name": null,
+      "discogs_name": null,
+      "website_title": "EricWhitacre.com",
+      "website": "http://ericwhitacre.com",
+      "reposts_count": null,
+      "comments_count": null,
+      "online": false,
+      "likes_count": null,
+      "avatar_url": "https://i1.sndcdn.com/avatars-000104412016-2vby0f-large.jpg",
+      "id": 135227,
+      "kind": "user",
+      "permalink_url": "http://soundcloud.com/ericwhitacre",
+      "uri": "https://api.soundcloud.com/users/135227",
+      "username": "ericwhitacre",
+      "permalink": "ericwhitacre",
+      "last_modified": "2015/11/02 01:20:43 +0000"
+    }
   ]
 }
