@@ -23,7 +23,7 @@ describe('Playlist type', function () {
     artworkUrl
     duration
     userConnection { username }
-    tracksConnection { title }
+    tracksCollection(limit: 1) { collection { title } }
   }
 }`;
     var expected = {
@@ -34,16 +34,11 @@ describe('Playlist type', function () {
       artworkUrl: 'https://i1.sndcdn.com/artworks-000052432909-2isoof-large.jpg',
       duration: 2397683,
       userConnection: { username: 'Seams' },
-      tracksConnection: [
-        { title: 'ClapOne' },
-        { title: 'Constants' },
-        { title: 'Pocket' },
-        { title: 'Sitcom Apartment' },
-        { title: 'Iceblerg' },
-        { title: 'Hurry Guests' },
-        { title: 'Rilo' },
-        { title: 'TXL' }
-      ]
+      tracksCollection: {
+        collection: [
+          { title: 'ClapOne' }
+        ]
+      }
     };
     return soundcloud(query).then(function (result) {
       expect(result.data.playlist).to.deep.equal(expected);

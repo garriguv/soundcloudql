@@ -3,13 +3,14 @@ import {
   GraphQLInt,
   GraphQLString,
   GraphQLNonNull,
-  GraphQLObjectType,
-  GraphQLList
+  GraphQLObjectType
 } from 'graphql';
 
 import {
   JSONDataWithPath
 } from '../../api';
+
+import { collectionType } from './collection';
 
 import TrackType from './track';
 import UserType from './user';
@@ -55,13 +56,15 @@ var PlaylistType = new GraphQLObjectType({
         return JSONDataWithPath('/users/' + root.user_id);
       }
     },
-    tracksConnection: {
-      type: new GraphQLList(TrackType),
-      description: 'The tracks in the playlist.',
-      resolve: (root) => {
-        return root.tracks;
+    tracksCollection: collectionType(
+      'PlaylistTracksCollection',
+      TrackType,
+      'The tracks of the playlist',
+      {},
+      function (root) {
+        return '/playlists/' + root.id + '/tracks';
       }
-    }
+    )
   })
 });
 
