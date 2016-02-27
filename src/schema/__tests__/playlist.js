@@ -18,6 +18,7 @@ describe('Playlist type', function () {
   playlist(id: 6584580) {
     id
     title
+    createdAt
     permalinkUrl
     description
     artworkUrl
@@ -29,6 +30,7 @@ describe('Playlist type', function () {
     var expected = {
       id: '6584580',
       title: 'Quarters',
+      createdAt: '2013/06/10 16:23:37 +0000',
       permalinkUrl: 'http://soundcloud.com/seams/sets/quarters',
       description: 'My first full-length album, released by Full Time Hobby; available on vinyl, CD, and download.\r\n\r\nPurchase the album from Bleep.com and get an exclusive set of postcards showcasing the 4 locations the album was made.\r\n\r\nhttps://bleep.com/release/45240-seams-quarters',
       artworkUrl: 'https://i1.sndcdn.com/artworks-000052432909-2isoof-large.jpg',

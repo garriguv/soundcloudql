@@ -29,6 +29,11 @@ var PlaylistType = new GraphQLObjectType({
       description: 'The title of the playlist.',
       resolve: (playlist) => playlist.title
     },
+    createdAt: {
+      type: GraphQLString,
+      description: 'The creation date of the playlist.',
+      resolve: (playlist) => playlist.created_at
+    },
     permalinkUrl: {
       type: new GraphQLNonNull(GraphQLString),
       description: 'The permalink URL of the playlist.',
