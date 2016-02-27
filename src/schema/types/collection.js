@@ -30,6 +30,9 @@ export function collectionType(
     args: argsWithDefaultCollectionArgs(pathArgs),
     description: description,
     resolve: (_, args) => {
+      if (args.next) {
+        return JSONDataWithPath(args.next);
+      }
       var path = constructPath(args);
       if (args.limit) {
         path += '&limit=' + args.limit;
@@ -41,14 +44,17 @@ export function collectionType(
 }
 
 function argsWithDefaultCollectionArgs(additionalArgs) {
-  var args = {
-    limit: {
-      type: GraphQLInt,
-      description: 'The number of items returned. Default 50, maximum 200.'
-    }
-  };
+  var args = {};
   Object.keys(additionalArgs).forEach(function (key) {
     args[key] = additionalArgs[key];
   });
+  args.limit = {
+    type: GraphQLInt,
+    description: 'The number of items returned. Default 50, maximum 200.'
+  };
+  args.next = {
+    type: GraphQLString,
+    description: 'The next page cursor.'
+  };
   return args;
 }
