@@ -19,6 +19,7 @@ describe('Group type', function () {
     id
     name
     description,
+    createdAt,
     creatorConnection { username }
     usersCollection(limit: 1) { collection { username } }
     moderatorsCollection(limit: 1) { collection { username } }
@@ -31,6 +32,7 @@ describe('Group type', function () {
       id: '3',
       name: 'Made with Ableton Live!',
       description: 'send your tracks, no DJ mixes please!',
+      createdAt: '2009/06/18 15:46:46 +0000',
       creatorConnection: { username: 'Ableton' },
       usersCollection: { collection: [ { username: 'bridges' } ] },
       moderatorsCollection: { collection: [ { username: 'Ableton' } ] },

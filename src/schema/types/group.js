@@ -33,6 +33,11 @@ var GroupType = new GraphQLObjectType({
       description: 'The description of the group.',
       resolve: (group) => group.description
     },
+    createdAt: {
+      type: GraphQLString,
+      description: 'The creation date of the group.',
+      resolve: (group) => group.created_at
+    },
     creatorConnection: {
       type: UserType,
       description: 'The creator of the group.',
