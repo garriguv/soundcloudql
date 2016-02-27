@@ -25,8 +25,12 @@ describe('User type', function () {
     description
     playlistCount
     trackCount
-    tracksCollection(limit:1) { collection { title } }
+    postedTracksCollection(limit:1) { collection { title } }
+    likedTracksCollection(limit:1) { collection { title } }
     commentsCollection(limit:1) { collection { body } }
+    followersCollection(limit:1) { collection { username } }
+    followingsCollection(limit:1) { collection { username } }
+    groupsCollection(limit:1) { collection { name } }
   }
 }`;
     var expected = {
@@ -39,12 +43,12 @@ describe('User type', function () {
       description: 'Founder/CTO SoundCloud.\r\nMusician under the alias http://soundcloud.com/forss',
       playlistCount: 20,
       trackCount: 154,
-      tracksCollection: {
-        collection: [ { title: 'Obama\'s 2013 Berlin Speech at Pariser Platz' } ]
-      },
-      commentsCollection: {
-        collection: [ { body: '🙌' } ]
-      }
+      postedTracksCollection: { collection: [ { title: 'Obama\'s 2013 Berlin Speech at Pariser Platz' } ] },
+      likedTracksCollection: { collection: [ { title: 'Javi Frias - Red Bull Mix' } ] },
+      commentsCollection: { collection: [ { body: '🙌' } ] },
+      followersCollection: { collection: [ { username: 'viktiria' }] },
+      followingsCollection: { collection: [ { username: 'Florence + The Machine' }] },
+      groupsCollection: { collection: [ { name: 'Dubstep' }] }
     };
     return soundcloud(query).then(function (result) {
       expect(result.data.user).to.deep.equal(expected);

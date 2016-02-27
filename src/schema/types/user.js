@@ -10,6 +10,7 @@ import { collectionType } from './collection';
 
 import TrackType from './track';
 import CommentType from './comment';
+import GroupType from './group';
 
 var UserType = new GraphQLObjectType({
   name: 'User',
@@ -60,13 +61,22 @@ var UserType = new GraphQLObjectType({
       description: 'The public track count of the user.',
       resolve: (user) => user.track_count
     },
-    tracksCollection: collectionType(
-      'UserPublicTracksCollection',
+    postedTracksCollection: collectionType(
+      'UserPostedTracksCollection',
       TrackType,
       'The public tracks of the user.',
       {},
       function (root) {
         return '/users/' + root.id + '/tracks';
+      }
+    ),
+    likedTracksCollection: collectionType(
+      'UserLikedTracksCollection',
+      TrackType,
+      'The liked tracks of the user.',
+      {},
+      function (root) {
+        return '/users/' + root.id + '/favorites';
       }
     ),
     commentsCollection: collectionType(
@@ -76,6 +86,33 @@ var UserType = new GraphQLObjectType({
       {},
       function (root) {
         return '/users/' + root.id + '/comments';
+      }
+    ),
+    followersCollection: collectionType(
+      'UserFollowersCollection',
+      UserType,
+      'The followers of the user.',
+      {},
+      function (root) {
+        return '/users/' + root.id + '/followers';
+      }
+    ),
+    followingsCollection: collectionType(
+      'UserFollowingsCollection',
+      UserType,
+      'The followings of the user.',
+      {},
+      function (root) {
+        return '/users/' + root.id + '/followings';
+      }
+    ),
+    groupsCollection: collectionType(
+      'UserGroupsCollection',
+      GroupType,
+      'The groups of the user.',
+      {},
+      function (root) {
+        return '/users/' + root.id + '/groups';
       }
     )
   })
