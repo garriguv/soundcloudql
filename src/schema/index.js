@@ -15,6 +15,7 @@ import PlaylistType from './types/playlist';
 import CommentType from './types/comment';
 import {
   SearchTracksType,
+  SearchPlaylistsType,
   SearchUsersType
 } from './types/search';
 
@@ -78,6 +79,7 @@ var rootType = new GraphQLObjectType({
       }
     },
     searchTracks: SearchTracksType,
+    searchPlaylists: SearchPlaylistsType,
     searchUsers: SearchUsersType
   })
 });

@@ -9,6 +9,7 @@ import {
 import { collectionType } from './collection';
 import { LicenseType, TrackType } from './track';
 import UserType from './user';
+import PlaylistType from './playlist';
 
 var SearchUsersType = collectionType(
   'SearchUsersCollection',
@@ -77,8 +78,23 @@ var SearchTracksType = collectionType(
     return path;
   });
 
+var SearchPlaylistsType = collectionType(
+  'SearchPlaylistsCollection',
+  PlaylistType,
+  'Search for playlists on SoundCloud',
+  {
+    q: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: 'The search query.'
+    }
+  },
+  function (root, args) {
+    return '/playlists?q=' + encodeURIComponent(args.q);
+  });
+
 export {
   SearchTracksType as default,
   SearchTracksType,
+  SearchPlaylistsType,
   SearchUsersType
 };

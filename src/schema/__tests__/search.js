@@ -18,4 +18,11 @@ describe('Search type', function () {
       expect(result.data.searchUsers.collection[0].username).to.equal('Eric Prydz');
     });
   });
+
+  it('Searches for playlists', function () {
+    var query = `{ searchPlaylists(q: "Robot Heart", limit: 2) { collection { title } }}`;
+    return soundcloud(query).then(function (result) {
+      expect(result.data.searchPlaylists.collection[0].title).to.equal('Robot Heart');
+    });
+  });
 });
