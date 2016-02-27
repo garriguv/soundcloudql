@@ -65,21 +65,21 @@ var rootType = new GraphQLObjectType({
       resolve: (_, args) => {
         let path = '/tracks?q=' + encodeURIComponent(args.q);
         if (args.tags) {
-          path += "&tags=" + encodeURIComponent(args.tags.join());
+          path += '&tags=' + encodeURIComponent(args.tags.join());
         }
         if (args.genres) {
-          path += "&genres=" + args.genres.join();
+          path += '&genres=' + args.genres.join();
         }
         if (args.bpm) {
-          path += "&bpm[from]=" + args.bpm.from;
-          path += "&bpm[to]=" + args.bpm.to;
+          path += '&bpm[from]=' + args.bpm.from;
+          path += '&bpm[to]=' + args.bpm.to;
         }
         if (args.duration) {
-          path += "&duration[from]=" + args.duration.from;
-          path += "&duration[to]=" + args.duration.to;
+          path += '&duration[from]=' + args.duration.from;
+          path += '&duration[to]=' + args.duration.to;
         }
         if (args.license) {
-          path += "&license=" + args.license;
+          path += '&license=' + args.license;
         }
         return JSONDataWithPath(path);
       }
@@ -99,14 +99,14 @@ var rootType = new GraphQLObjectType({
       }
     },
     users: {
-        type: new GraphQLList(UserType),
-        args: {
-          q: { type: new GraphQLNonNull(GraphQLString) }
-        },
-        description: 'Search for users',
-        resolve: (_, args) => {
-            return JSONDataWithPath('/users?q=' + args.q);
-        }
+      type: new GraphQLList(UserType),
+      args: {
+        q: { type: new GraphQLNonNull(GraphQLString) }
+      },
+      description: 'Search for users',
+      resolve: (_, args) => {
+        return JSONDataWithPath('/users?q=' + args.q);
+      }
     },
     playlist: {
       type: PlaylistType,
