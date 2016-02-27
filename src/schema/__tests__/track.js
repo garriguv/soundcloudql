@@ -22,7 +22,7 @@ describe('Track type', function () {
     artworkUrl
     duration
     userConnection { username }
-    commentsConnection(limit: 1) { timestamp }
+    commentsCollection(limit: 1) { collection { timestamp } }
   }
 }`;
     var expected = {
@@ -34,7 +34,9 @@ describe('Track type', function () {
       artworkUrl: null,
       duration: 45760,
       userConnection: { username: 'Eric' },
-      commentsConnection: [ { timestamp: 42076 } ]
+      commentsCollection: {
+        collection: [ { timestamp: 42076 } ]
+      }
     };
     return soundcloud(query).then(function (result) {
       expect(result.data.track).to.deep.equal(expected);

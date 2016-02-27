@@ -12,6 +12,8 @@ import {
   JSONDataWithPath
 } from '../../api';
 
+import { collectionType } from './collection';
+
 import UserType from './user';
 import CommentType from './comment';
 
@@ -104,18 +106,15 @@ var TrackType = new GraphQLObjectType({
         return JSONDataWithPath('/users/' + root.user_id);
       }
     },
-    commentsConnection: {
-      type: new GraphQLList(CommentType),
-      description: 'The comments on the track.',
-      args: {
-        limit: { type: GraphQLInt }
-      },
-      resolve: (root, args) => {
-        return JSONDataWithPath(
-          '/tracks/' + root.id +
-          '/comments?limit=' + args.limit);
+    commentsCollection: collectionType(
+      'TrackCommentsCollection',
+      CommentType,
+      'The comments on the track.',
+      {},
+      function (root) {
+        return '/tracks/' + root.id + '/comments';
       }
-    }
+    )
   })
 });
 

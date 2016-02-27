@@ -1728,5 +1728,30 @@
       }
     ],
     "next_href": "https://api.soundcloud.com/playlists/6584580/tracks?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1"
+  },
+  "/tracks/2/comments?linked_partitioning=1&limit=1": {
+    "collection": [
+      {
+        "kind": "comment",
+        "id": 264502049,
+        "created_at": "2016/01/11 09:59:30 +0000",
+        "user_id": 2,
+        "track_id": 2,
+        "timestamp": 42076,
+        "body": "🙌",
+        "uri": "https://api.soundcloud.com/comments/264502049",
+        "user": {
+          "id": 2,
+          "kind": "user",
+          "permalink": "eric",
+          "username": "Eric",
+          "last_modified": "2016/02/13 02:31:13 +0000",
+          "uri": "https://api.soundcloud.com/users/2",
+          "permalink_url": "http://soundcloud.com/eric",
+          "avatar_url": "https://i1.sndcdn.com/avatars-000153316546-tqxejr-large.jpg"
+        }
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/tracks/2/comments?client_id=6f67f96d72c268d815e7a6f74f6552b5&limit=1&linked_partitioning=1&offset=1"
   }
 }
