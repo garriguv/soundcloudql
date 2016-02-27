@@ -1234,5 +1234,35 @@
         "followings_count": 5
       }
     ]
+  },
+  "/groups?q=Boiler%20Room&linked_partitioning=1&limit=1": {
+    "collection": [
+      {
+        "kind": "group",
+        "id": 157275,
+        "created_at": "2014/08/03 23:11:56 +0000",
+        "permalink": "we-love-the-boiler-room",
+        "track_count": 73,
+        "members_count": 76,
+        "moderated": false,
+        "name": "We Love the Boiler Room",
+        "short_description": "Celebrating great DJing, music, styles and vibes.",
+        "description": " Dance, Hip Hop, RnB, Minimal Future, Funk. Whatever the crowd wants!\r\nIts all about that dance floor effect!",
+        "uri": "https://api.soundcloud.com/groups/157275",
+        "artwork_url": "http://i1.sndcdn.com/artworks-000087054195-7cka81-large.jpg",
+        "permalink_url": "http://soundcloud.com/groups/we-love-the-boiler-room",
+        "creator": {
+          "avatar_url": "https://i1.sndcdn.com/avatars-000084543333-9ia0uc-large.jpg",
+          "id": 95336915,
+          "kind": "user",
+          "permalink_url": "http://soundcloud.com/ithiceterson",
+          "uri": "https://api.soundcloud.com/users/95336915",
+          "username": "Rithic Vision",
+          "permalink": "ithiceterson",
+          "last_modified": "2015/10/13 12:37:08 +0000"
+        }
+      }
+    ],
+    "next_href": "https://api.soundcloud.com/groups?linked_partitioning=1&client_id=6f67f96d72c268d815e7a6f74f6552b5&offset=1&q=Boiler%20Room&limit=1"
   }
 }

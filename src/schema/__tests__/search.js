@@ -25,4 +25,11 @@ describe('Search type', function () {
       expect(result.data.searchPlaylists.collection[0].title).to.equal('Eric Prydz presents EPIC Radio');
     });
   });
+
+  it('Searches for groups', function () {
+    var query = `{ searchGroups(q: "Boiler Room", limit: 1) { collection { name } }}`;
+    return soundcloud(query).then(function (result) {
+      expect(result.data.searchGroups.collection[0].name).to.equal('We Love the Boiler Room');
+    });
+  });
 });

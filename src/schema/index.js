@@ -17,6 +17,7 @@ import GroupType from './types/group';
 import {
   SearchTracksType,
   SearchPlaylistsType,
+  SearchGroupsType,
   SearchUsersType
 } from './types/search';
 
@@ -79,9 +80,19 @@ var rootType = new GraphQLObjectType({
         }
       }
     },
-    group: GroupType,
+    group: {
+      type: GroupType,
+      args: {
+        id: { type: new GraphQLNonNull(GraphQLID) }
+      },
+      description: 'Find group by id',
+      resolve: (_, args) => {
+        return JSONDataWithPath('/groups/' + args.id);
+      }
+    },
     searchTracks: SearchTracksType,
     searchPlaylists: SearchPlaylistsType,
+    searchGroups: SearchGroupsType,
     searchUsers: SearchUsersType
   })
 });

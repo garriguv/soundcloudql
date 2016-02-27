@@ -3,13 +3,14 @@ import {
   GraphQLString,
   GraphQLNonNull,
   GraphQLList,
-  GraphQLInputObjectType,
+  GraphQLInputObjectType
 } from 'graphql';
 
 import { collectionType } from './collection';
 import { LicenseType, TrackType } from './track';
 import UserType from './user';
 import PlaylistType from './playlist';
+import GroupType from './group';
 
 var SearchUsersType = collectionType(
   'SearchUsersCollection',
@@ -92,9 +93,24 @@ var SearchPlaylistsType = collectionType(
     return '/playlists?q=' + encodeURIComponent(args.q);
   });
 
+var SearchGroupsType = collectionType(
+  'SearchGroupsCollection',
+  GroupType,
+  'Search for groups on SoundCloud',
+  {
+    q: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: 'The search query.'
+    }
+  },
+  function (root, args) {
+    return '/groups?q=' + encodeURIComponent(args.q);
+  });
+
 export {
   SearchTracksType as default,
   SearchTracksType,
   SearchPlaylistsType,
+  SearchGroupsType,
   SearchUsersType
 };
