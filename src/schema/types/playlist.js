@@ -55,7 +55,7 @@ var PlaylistType = new GraphQLObjectType({
       resolve: (playlist) => playlist.duration
     },
     userConnection: {
-      type: UserType,
+      type: new GraphQLNonNull(UserType),
       description: 'The user who posted the playlist.',
       resolve: (root) => {
         return JSONDataWithPath('/users/' + root.user_id);

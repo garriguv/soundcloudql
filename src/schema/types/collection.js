@@ -2,7 +2,8 @@ import {
   GraphQLInt,
   GraphQLString,
   GraphQLList,
-  GraphQLObjectType
+  GraphQLObjectType,
+  GraphQLNonNull
 } from 'graphql';
 
 import {
@@ -12,11 +13,11 @@ import {
 export function collectionType(
   name, type, description, pathArgs, constructPath) {
   return {
-    type: new GraphQLObjectType({
+    type: new GraphQLNonNull(new GraphQLObjectType({
       name: name,
       fields: {
         collection: {
-          type: new GraphQLList(type)
+          type: new GraphQLNonNull(new GraphQLList(type))
         },
         next: {
           type: GraphQLString,
@@ -26,7 +27,7 @@ export function collectionType(
           }
         }
       }
-    }),
+    })),
     args: argsWithDefaultCollectionArgs(pathArgs),
     description: description,
     resolve: (_, args) => {

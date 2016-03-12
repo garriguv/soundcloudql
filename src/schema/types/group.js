@@ -39,7 +39,7 @@ var GroupType = new GraphQLObjectType({
       resolve: (group) => group.created_at
     },
     creatorConnection: {
-      type: UserType,
+      type: new GraphQLNonNull(UserType),
       description: 'The creator of the group.',
       resolve: (root) => {
         return JSONDataWithPath('/users/' + root.creator.id);

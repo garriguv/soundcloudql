@@ -134,7 +134,7 @@ var TrackType = new GraphQLObjectType({
       resolve: (track) => track.license
     },
     userConnection: {
-      type: UserType,
+      type: new GraphQLNonNull(UserType),
       description: 'The user who posted the track.',
       resolve: (root) => {
         return JSONDataWithPath('/users/' + root.user_id);

@@ -33,14 +33,14 @@ var CommentType = new GraphQLObjectType({
       resolve: (comment) => comment.timestamp
     },
     userConnection: {
-      type: UserType,
+      type: new GraphQLNonNull(UserType),
       description: 'The user who posted the comment.',
       resolve: (root) => {
         return JSONDataWithPath('/users/' + root.user_id);
       }
     },
     trackConnection: {
-      type: TrackType,
+      type: new GraphQLNonNull(TrackType),
       description: 'The track the comment is posted on.',
       resolve: (root) => {
         return JSONDataWithPath('/tracks/' + root.track_id);
