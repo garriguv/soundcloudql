@@ -25,6 +25,8 @@ describe('User type', function () {
     description
     playlistCount
     trackCount
+    followersCount
+    followingsCount
     postedTracksCollection(limit:1) { collection { title } }
     likedTracksCollection(limit:1) { collection { title } }
     commentsCollection(limit:1) { collection { body } }
@@ -43,6 +45,8 @@ describe('User type', function () {
       description: 'Founder/CTO SoundCloud.\r\nMusician under the alias http://soundcloud.com/forss',
       playlistCount: 20,
       trackCount: 154,
+      followersCount: 44654,
+      followingsCount: 1654,
       postedTracksCollection: { collection: [ { title: 'Obama\'s 2013 Berlin Speech at Pariser Platz' } ] },
       likedTracksCollection: { collection: [ { title: 'Javi Frias - Red Bull Mix' } ] },
       commentsCollection: { collection: [ { body: '🙌' } ] },

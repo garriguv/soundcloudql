@@ -61,6 +61,16 @@ var UserType = new GraphQLObjectType({
       description: 'The public track count of the user.',
       resolve: (user) => user.track_count
     },
+    followersCount: {
+      type: GraphQLInt,
+      description: 'The number of followers of the user.',
+      resolve: (user) => user.followers_count
+    },
+    followingsCount: {
+      type: GraphQLInt,
+      description: 'The number of followings of the user.',
+      resolve: (user) => user.followings_count
+    },
     postedTracksCollection: collectionType(
       'UserPostedTracksCollection',
       TrackType,
