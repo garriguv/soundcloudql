@@ -74,7 +74,7 @@ var TrackType = new GraphQLObjectType({
       resolve: (track) => track.title
     },
     createdAt: {
-      type: GraphQLString,
+      type: new GraphQLNonNull(GraphQLString),
       description: 'The creation date of the track.',
       resolve: (track) => track.created_at
     },
@@ -124,7 +124,7 @@ var TrackType = new GraphQLObjectType({
       resolve: (track) => track.artwork_url
     },
     duration: {
-      type: GraphQLInt,
+      type: new GraphQLNonNull(GraphQLInt),
       description: 'The duration of the track in milliseconds.',
       resolve: (track) => track.duration
     },
