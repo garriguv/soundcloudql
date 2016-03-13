@@ -54,6 +54,11 @@ var PlaylistType = new GraphQLObjectType({
       description: 'The duration of the playlist in milliseconds.',
       resolve: (playlist) => playlist.duration
     },
+    tracksCount: {
+      type: GraphQLInt,
+      description: 'The number of tracks in the playlist.',
+      resolve: (playlist) => playlist.track_count
+    },
     userConnection: {
       type: new GraphQLNonNull(UserType),
       description: 'The user who posted the playlist.',
