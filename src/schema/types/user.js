@@ -9,6 +9,7 @@ import {
 import { collectionType } from './collection';
 
 import TrackType from './track';
+import PlaylistType from './playlist';
 import CommentType from './comment';
 import GroupType from './group';
 
@@ -78,6 +79,15 @@ var UserType = new GraphQLObjectType({
       {},
       function (root) {
         return '/users/' + root.id + '/tracks';
+      }
+    ),
+    postedPlaylistsCollection: collectionType(
+      'UserPostedPlaylistsCollection',
+      PlaylistType,
+      'The public playlists of the user.',
+      {},
+      function (root) {
+        return '/users/' + root.id + '/playlists';
       }
     ),
     likedTracksCollection: collectionType(

@@ -28,6 +28,7 @@ describe('User type', function () {
     followersCount
     followingsCount
     postedTracksCollection(limit:1) { collection { title } }
+    postedPlaylistsCollection(limit: 1) { collection { title } }
     likedTracksCollection(limit:1) { collection { title } }
     commentsCollection(limit:1) { collection { body } }
     followersCollection(limit:1) { collection { username } }
@@ -48,6 +49,7 @@ describe('User type', function () {
       followersCount: 44654,
       followingsCount: 1654,
       postedTracksCollection: { collection: [ { title: 'Obama\'s 2013 Berlin Speech at Pariser Platz' } ] },
+      postedPlaylistsCollection: { collection: [ { title: 'Show favorites' } ] },
       likedTracksCollection: { collection: [ { title: 'Javi Frias - Red Bull Mix' } ] },
       commentsCollection: { collection: [ { body: '🙌' } ] },
       followersCollection: { collection: [ { username: 'viktiria' }] },
