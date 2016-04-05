@@ -17,6 +17,7 @@ describe('Comment type', function () {
     id
     body
     timestamp
+    createdAt
     userConnection { username }
     trackConnection { title }
   }
@@ -25,6 +26,7 @@ describe('Comment type', function () {
       id: '264502049',
       body: '🙌',
       timestamp: 42076,
+      createdAt: '2016/01/11 09:59:30 +0000',
       userConnection: { username: 'Eric' },
       trackConnection: { title: 'Electro 1' }
     };
