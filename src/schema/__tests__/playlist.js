@@ -6,7 +6,7 @@ import { soundcloud } from './soundcloudql';
 
 describe('Playlist type', function () {
   it('Gets an object by id', function () {
-    var query = `{ playlist(id: 6584580) { title }}`;
+    var query = '{ playlist(id: 6584580) { title }}';
     return soundcloud(query).then(function (result) {
       expect(result.data.playlist.title).to.equal('Quarters');
     });

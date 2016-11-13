@@ -6,7 +6,7 @@ import { soundcloud } from './soundcloudql';
 
 describe('User type', function () {
   it('Gets an object by id', function () {
-    var query = `{ user(id: 2) { username }}`;
+    var query = '{ user(id: 2) { username }}';
     return soundcloud(query).then(function (result) {
       expect(result.data.user.username).to.equal('Eric');
     });

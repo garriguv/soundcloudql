@@ -6,7 +6,7 @@ import { soundcloud } from './soundcloudql';
 
 describe('Group type', function () {
   it('Gets an object by id', function () {
-    var query = `{ group(id: 3) { name }}`;
+    var query = '{ group(id: 3) { name }}';
     return soundcloud(query).then(function (result) {
       expect(result.data.group.name).to.equal('Made with Ableton Live!');
     });

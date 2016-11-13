@@ -4,7 +4,7 @@ import { soundcloud } from './soundcloudql';
 
 describe('Comment type', function () {
   it('Gets an object by id', function () {
-    var query = `{ comment(id: 264502049) { body }}`;
+    var query = '{ comment(id: 264502049) { body }}';
     return soundcloud(query).then(function (result) {
       expect(result.data.comment.body).to.equal('🙌');
     });
